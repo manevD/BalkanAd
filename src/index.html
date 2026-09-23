@@ -1,1004 +1,491 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sr-Latn">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BALKAN / AD STUDIO — Kreativa za Meta Ads</title>
-<meta name="description" content="Statični oglasi i AI UGC videi za e-commerce brendove u Srbiji. Fiksan rok isporuke, mesečna rotacija, bez produkcijskog dana.">
-<meta name="theme-color" content="#151515">
-<meta property="og:title" content="BALKAN / AD STUDIO">
-<meta property="og:description" content="Statični oglasi i AI UGC videi za e-commerce brendove u Srbiji. Isporuka za 5 radnih dana.">
-<meta property="og:locale" content="sr_RS">
-<link rel="alternate" hreflang="sr-Latn-RS" href="/rs">
-<link rel="alternate" hreflang="mk-MK" href="/mk">
-<link rel="alternate" hreflang="en" href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Balkan / Ad Studio">
+<meta property="og:description" content="50 kreativa mesečno za e-commerce brendove u Srbiji. Isporuka za 5 radnih dana.">
+<meta property="og:image" content="icon-256.png">
+<link rel="apple-touch-icon" href="icon-256.png">
+<title>Balkan / Ad Studio — kreativa za e-commerce u Srbiji</title>
+<meta name="description" content="Statični oglasi i AI UGC video za e-commerce brendove u Srbiji. 50 kreativa mesečno, isporuka za 5 radnih dana, prava korišćenja uključena.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
 <style>
 :root{
-  --ink:#151515;
-  --ink-2:#1E1E1D;
-  --ink-3:#2E2E2B;
-  --cream:#F4F0E8;
-  --cream-2:#E6E1D5;
-  --lime:#D8F26B;
-  --mid-dark:#8F8E86;
-  --mid-light:#6E6C63;
-  --line-dark:#31312E;
-  --line-light:#D3CEC1;
+  color-scheme:dark;
+  --ink:#151515; --surface:#1E1E1C; --cream:#F4F0E8; --lime:#D8F26B; --lime-hi:#E6F89A;
+  --lime-deep:#5E710F; --moss:#79806A; --graphite:#6F6C63; --muted:#A9A59B;
+  --hair:rgba(244,240,232,.12); --hair-2:rgba(244,240,232,.26); --rule-cream:#D6D1C6;
+  --gut:clamp(18px,5vw,72px); --max:1340px;
+  --f:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--f);font-size:16px;line-height:1.55;
+     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.cream :focus-visible{outline-color:var(--ink)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-  --pad:clamp(20px,5vw,72px);
-  --maxw:1400px;
-  --ease:cubic-bezier(.16,1,.3,1);
-  --spring:cubic-bezier(.34,1.42,.5,1);
+/* ---------- shared pieces ---------- */
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--lime);font-weight:600;font-size:15px;letter-spacing:.03em;text-transform:uppercase}
+.eyebrow::after{content:"";width:56px;height:1.5px;background:currentColor;opacity:.9}
+.eyebrow svg{width:18px;height:18px;flex:none}
+.cream .eyebrow{color:var(--lime-deep)}
+h2{font-weight:800;font-size:clamp(34px,4.6vw,62px);line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
+.sub{color:var(--muted);font-size:17px;line-height:1.55;max-width:52ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 28px;
+     font:600 16px/1.2 var(--f);border:1.5px solid transparent;cursor:pointer;white-space:nowrap;
+     transition:background-color .15s,border-color .15s,color .15s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-lime:hover{background:var(--lime-hi)}
+.btn-line{border-color:var(--hair-2);color:var(--cream);background:transparent}
+.btn-line:hover{border-color:var(--cream)}
+.lbl{display:flex;align-items:center;gap:8px;margin-bottom:7px;min-height:22px}
+.lbl .fmt{margin-left:auto}
+.tag{display:inline-flex;align-items:center;gap:6px;background:var(--lime);color:var(--ink);
+     font-weight:700;font-stretch:78%;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;padding:5px 8px 4px;line-height:1}
+.tag svg{width:14px;height:11px}
+.fmt{background:transparent;border:1px solid var(--hair-2);color:var(--cream);font-weight:600;font-size:12px;
+     padding:5px 8px 4px;line-height:1;font-variant-numeric:tabular-nums}
+.ico{width:34px;height:34px;flex:none}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(21,21,21,.94);border-bottom:1px solid var(--hair);
+     -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}
+.brand{display:block;flex:none}
+.brand svg{display:block;height:34px;width:auto}
+.nav{display:flex;align-items:center;gap:36px}
+.nav .lnk{color:rgba(244,240,232,.8);font-size:17px;transition:color .15s}
+.nav .lnk:hover{color:var(--cream)}
+.nav .btn{min-height:50px;padding:0 22px}
+.menu-btn{display:none;align-items:center;gap:10px;min-height:44px;padding:0 14px;border:1.5px solid var(--hair-2);background:none;color:var(--cream);font:600 15px var(--f);cursor:pointer}
+.menu-btn svg{width:18px;height:18px}
+@media(max-width:980px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ink);border-bottom:1px solid var(--hair);
+       flex-direction:column;align-items:stretch;gap:0;padding:8px var(--gut) 20px}
+  .hdr.open .nav{display:flex}
+  .nav .lnk{padding:14px 0;border-bottom:1px solid var(--hair)}
+  .nav .btn{margin-top:16px}
+  .menu-btn{display:inline-flex}
+}
+@media(max-width:980px){.hdr .brand svg{height:30px}}
+@media(max-width:430px){.hdr .brand svg{height:26px}.menu-btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.menu-btn{padding:0 12px}}
+/* the mark assembles once, on load (brand book 09) */
+.hdr .mk-f rect{animation:tick 4.4s steps(1) both}
+.hdr .mk-f .f1{animation-delay:0s}.hdr .mk-f .f2{animation-delay:.42s}.hdr .mk-f .f3{animation-delay:.84s}
+.hdr .mk-f .f4{animation-delay:1.26s}.hdr .mk-f .f5{animation-delay:1.68s}
+@keyframes tick{0%{opacity:1}3%{opacity:.25}6%{opacity:1}100%{opacity:1}}
+.hdr .mk-w{animation:lift .55s cubic-bezier(.2,.8,.2,1) 2.8s both}
+@keyframes lift{from{transform:translateY(15.2px);opacity:.25}to{transform:none;opacity:1}}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(40px,6vw,76px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,5vw,84px);align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:26px}
+.hero h1{font-weight:800;font-style:italic;font-size:clamp(40px,4.9vw,72px);line-height:.98;letter-spacing:-.04em;text-wrap:balance}
+.hero .lead{color:var(--muted);font-size:clamp(17px,1.5vw,20px);line-height:1.55;max-width:44ch}
+.ctas{display:flex;flex-wrap:wrap;gap:16px;padding-top:6px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:18px 0 0;padding-top:34px;border-top:1px solid var(--hair)}
+.stat{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:center;color:var(--lime)}
+.stat b{font-weight:700;font-size:clamp(26px,2.4vw,34px);letter-spacing:-.03em;color:var(--cream);line-height:1;white-space:nowrap}
+.stat span{grid-column:2;color:var(--muted);font-size:15px;line-height:1.4;margin-top:8px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;padding-top:22px}
+.tile{position:relative;margin:0}
+.tile img{width:100%;height:auto;background:var(--surface)}
+.tile.win{animation:win .55s cubic-bezier(.2,.8,.2,1) 2.8s both}
+@keyframes win{from{transform:none}to{transform:translateY(-14px)}}
+.tile.win img{outline:3px solid var(--lime);outline-offset:-3px}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .tiles{gap:10px;max-width:560px}
+}
+@media(max-width:560px){.stats{grid-template-columns:1fr;gap:18px}.stat span{margin-top:4px}}
+
+/* ---------- ribbon ---------- */
+.ribbon{background:var(--lime);color:var(--ink);overflow:hidden;white-space:nowrap;margin-top:clamp(56px,7vw,96px);padding:22px 0}
+.ribbon .track{display:inline-flex;gap:30px;animation:ribbon 42s linear infinite;font-weight:500;font-size:18px}
+.ribbon i{font-style:normal;opacity:.45}
+@keyframes ribbon{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- work ---------- */
+.work{padding-top:clamp(72px,9vw,120px)}
+.work-head{display:flex;flex-direction:column;align-items:flex-start;gap:30px}
+.work-head .t{display:flex;flex-direction:column;gap:18px;max-width:720px}
+.work h2{font-weight:700;letter-spacing:-.045em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:40px;padding:0 16px;border:1.5px solid var(--hair-2);background:transparent;color:var(--cream);font:600 14.5px var(--f);cursor:pointer}
+.chip:hover{border-color:var(--cream)}
+.chip[aria-pressed="true"]{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.masonry{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px;align-items:start}
+.masonry.js{grid-auto-rows:4px;grid-auto-flow:row dense;row-gap:0}
+.w.wide{grid-column:span 2}
+@media(max-width:1060px){.masonry{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:720px){.masonry{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.more{margin-top:26px}
+.w{position:relative;margin:0;align-self:start}
+.w img{width:100%;height:auto;background:var(--surface)}
+.w.win img{outline:3px solid var(--lime);outline-offset:-3px}
+.w figcaption{font-size:13.5px;color:var(--muted);margin-top:9px;line-height:1.35}
+.w figcaption b{color:var(--cream);font-weight:600}
+.demo-note{color:var(--muted);font-size:14px;margin-top:26px;max-width:70ch}
+.statbar{background:var(--lime);color:var(--ink);margin-top:clamp(56px,7vw,88px)}
+.statbar .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.sb{display:flex;align-items:center;justify-content:center;gap:16px;padding:26px 16px}
+.sb+.sb{border-left:1px solid rgba(21,21,21,.18)}
+.sb b{display:block;font-weight:700;font-size:28px;letter-spacing:-.03em;line-height:1}
+.sb span{font-size:14px}
+@media(max-width:700px){.statbar .wrap{grid-template-columns:1fr}.sb{justify-content:flex-start}.sb+.sb{border-left:0;border-top:1px solid rgba(21,21,21,.18)}
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+/* ---------- results ---------- */
+.proof{padding-block:clamp(72px,9vw,120px)}
+.proof-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end}
+.proof .t{display:flex;flex-direction:column;gap:20px}
+.pstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0}
+.pstats div{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--hair-2);padding-top:18px}
+.pstats dd{order:-1;margin:0;font-weight:800;font-size:clamp(34px,3.6vw,54px);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.pstats dd.hi{color:var(--lime)}
+.pstats dt{color:var(--muted);font-size:14.5px;line-height:1.35}
+.shot{margin:44px 0 0}
+.shot .scroll{overflow-x:auto;background:#fff;border:1px solid var(--hair-2)}
+.shot img{width:100%;min-width:760px}
+.shot figcaption{color:var(--muted);font-size:13.5px;margin-top:12px;max-width:80ch}
+@media(max-width:900px){.proof-head{grid-template-columns:1fr}}
+@media(max-width:520px){.pstats{grid-template-columns:1fr 1fr}.pstats div:last-child{grid-column:1/-1}}
 
-body{
-  background:var(--cream);color:var(--ink);
-  font-family:'Archivo',system-ui,-apple-system,sans-serif;
-  font-variation-settings:'wdth' 100,'wght' 400;
-  font-size:clamp(15px,1vw,16.5px);line-height:1.55;
-  overflow-x:hidden;-webkit-font-smoothing:antialiased;
-}
+/* ---------- process (the one cream section) ---------- */
+.cream{background:var(--cream);color:var(--ink)}
+.process{padding-block:clamp(72px,9vw,112px)}
+.pr-head{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.pr-head .t{display:flex;flex-direction:column;gap:22px;max-width:780px}
+.cream h2{font-size:clamp(38px,5.2vw,72px)}
+.cream .sub{color:var(--graphite);font-size:18px}
+.dot{color:var(--lime-deep)}
+.steps{list-style:none;margin:clamp(40px,5vw,60px) 0 0;padding:34px 0 0;border-top:1px solid var(--rule-cream);border-bottom:1px solid var(--rule-cream);
+       padding-bottom:40px;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:28px;align-items:start}
+.step-top{display:flex;align-items:center;gap:26px}
+.step-top .ico{width:48px;height:48px}
+.st-n{font-weight:800;font-size:clamp(52px,6vw,78px);line-height:.9;letter-spacing:-.04em;color:var(--lime-deep)}
+.step h3{font-weight:700;font-size:clamp(22px,2.2vw,30px);line-height:1.1;letter-spacing:-.03em;margin-top:26px;text-wrap:balance}
+.step p{color:var(--graphite);font-size:16px;line-height:1.55;margin-top:16px;max-width:38ch}
+.arrow{width:38px;height:38px;margin-top:22px;color:var(--ink)}
+@media(max-width:900px){.steps{grid-template-columns:1fr}.arrow{display:none}.step+.arrow+.step{padding-top:8px}}
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);width:100%}
+/* ---------- cta band ---------- */
+.band{background:var(--ink)}
+.band .wrap{display:flex;align-items:center;gap:28px;padding-block:44px;flex-wrap:wrap}
+.band .up{width:42px;height:42px;color:var(--lime);flex:none}
+.band .vr{width:1px;align-self:stretch;min-height:56px;background:var(--hair)}
+.band-line{flex:1 1 360px;color:var(--lime);font-weight:700;font-size:clamp(26px,3.4vw,46px);letter-spacing:-.035em;line-height:1.05}
+.band-side{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.mail{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px}
+.mail code{font:500 14px var(--f);color:var(--cream);user-select:all}
+.copy{min-height:32px;padding:0 10px;background:none;border:1px solid var(--hair-2);color:var(--cream);font:600 12.5px var(--f);cursor:pointer}
+.copy:hover{border-color:var(--cream)}
+@media(max-width:700px){.band .vr{display:none}}
 
-h1,h2,h3{letter-spacing:-.035em;line-height:.98;text-wrap:balance;font-variation-settings:'wdth' 112,'wght' 800}
-h1{font-size:clamp(2.1rem,4.3vw,3.5rem);line-height:1.02}
-h2{font-size:clamp(1.65rem,3vw,2.5rem)}
-h3{font-size:clamp(1.05rem,1.5vw,1.32rem);font-variation-settings:'wdth' 106,'wght' 720;letter-spacing:-.022em}
-p{max-width:64ch}
-a{color:inherit}
-:focus-visible{outline:2.5px solid var(--lime);outline-offset:3px;border-radius:1px}
-::selection{background:var(--lime);color:var(--ink)}
+/* ---------- packages ---------- */
+.pk{padding-block:clamp(72px,9vw,120px);border-top:1px solid var(--hair)}
+.pk-head{display:flex;flex-direction:column;gap:18px;max-width:760px}
+.pk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:48px;align-items:stretch}
+.card{position:relative;border:1.5px solid var(--hair-2);padding:30px 28px 28px;display:flex;flex-direction:column;gap:18px;background:var(--ink)}
+.card.best{border-color:var(--lime);box-shadow:inset 0 0 0 1.5px var(--lime);transform:translateY(-14px)}
+.card .tag{position:static;align-self:flex-start}
+.card h3{font-weight:800;font-size:30px;letter-spacing:-.03em;line-height:1}
+.card .for{color:var(--muted);font-size:15px;margin-top:-8px}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;padding-top:18px;border-top:1px solid var(--hair)}
+.price b{font-weight:800;font-size:clamp(38px,3.6vw,52px);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price small{font-size:.42em;font-weight:600;letter-spacing:0;margin-right:6px;color:var(--muted)}
+.price span{color:var(--muted);font-size:15px}
+.unit{color:var(--lime);font-weight:600;font-size:15px;margin-top:-8px}
+.turn{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+.turn svg{width:26px;height:26px;color:var(--lime)}
+.card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;flex:1}
+.card li{position:relative;padding-left:24px;font-size:15.5px;line-height:1.45}
+.card li::before{content:"";position:absolute;left:0;top:.42em;width:9px;height:11px;border:1.5px solid var(--muted)}
+.card.best li::before{border-color:var(--lime)}
+.card .btn{width:100%;margin-top:6px}
+.pk-all{color:var(--muted);font-size:15px;margin-top:30px}
+.audit{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:22px;padding:24px 28px;background:var(--surface)}
+.audit p{max-width:74ch;color:var(--muted);font-size:15.5px}
+.audit b{color:var(--cream);font-weight:700}
+@media(max-width:980px){.pk-grid{grid-template-columns:1fr;max-width:560px}.card.best{transform:none}}
 
-/* grain, fixed and inert */
-.grain{position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.22;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E")}
+/* ---------- faq ---------- */
+.faq{padding-block:clamp(64px,8vw,110px);border-top:1px solid var(--hair)}
+.faq .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px)}
+.faq .t{display:flex;flex-direction:column;gap:18px}
+.acc details{border-bottom:1px solid var(--hair)}
+.acc details:first-child{border-top:1px solid var(--hair)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-weight:700;font-size:19px;letter-spacing:-.015em}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"";width:12px;height:12px;flex:none;border-right:2px solid var(--lime);border-bottom:2px solid var(--lime);transform:rotate(45deg) translateY(-4px);transition:transform .2s}
+.acc details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.acc details p{color:var(--muted);font-size:16px;line-height:1.6;padding:0 0 24px;max-width:62ch}
+@media(max-width:900px){.faq .wrap{grid-template-columns:1fr}}
 
-#prog{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--lime);transform:scaleX(0);transform-origin:0 50%;z-index:70}
-@supports (animation-timeline:scroll()){
-  #prog{animation:grow linear both;animation-timeline:scroll(root block)}
-  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-}
-
-/* ============ mark ============ */
-.mk rect.f{fill:none;stroke-width:7;stroke-dasharray:133;stroke-dashoffset:133}
-.mk .lime{fill:var(--lime);transform-box:fill-box;transform-origin:50% 100%;transform:translateY(26px) scale(.35);opacity:0}
-.mk.go rect.f{animation:draw .78s var(--ease) forwards;animation-delay:calc(var(--i)*.1s)}
-.mk.go .lime{animation:pop .82s var(--spring) .72s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes pop{to{transform:translateY(0) scale(1);opacity:1}}
-.mk.on-ink rect.f{stroke:var(--cream)}
-.mk.on-cream rect.f{stroke:var(--ink)}
-
-/* ============ nav ============ */
-nav{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:1px solid var(--line-dark)}
-.nav-in{max-width:var(--maxw);margin:0 auto;padding:12px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--cream)}
-.brand svg{height:26px;width:auto;overflow:visible}
-.brand b{font-variation-settings:'wdth' 118,'wght' 800;font-size:.98rem;letter-spacing:-.045em;white-space:nowrap}
-.brand b em{font-style:normal;color:var(--lime);margin:0 3px}
-.brand b i{font-style:normal;font-size:.62rem;font-variation-settings:'wdth' 92,'wght' 600;letter-spacing:.02em;color:var(--mid-dark)}
-.nav-links{display:flex;align-items:center;gap:28px;font-size:.86rem;color:var(--mid-dark)}
-.nav-links a{text-decoration:none;transition:color .25s var(--ease)}
-.nav-links a:hover{color:var(--cream)}
-@media(max-width:900px){.nav-links a:not(.btn){display:none}}
-
-/* ============ buttons ============ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;
-  border:1.5px solid currentColor;background:transparent;color:inherit;font:inherit;
-  font-variation-settings:'wdth' 106,'wght' 660;font-size:.9rem;letter-spacing:-.012em;
-  text-decoration:none;cursor:pointer;position:relative;overflow:hidden;isolation:isolate;
-  transition:color .28s var(--ease),transform .16s var(--ease)}
-.btn>span{position:relative;z-index:2}
-.btn::before{content:"";position:absolute;inset:0;background:var(--lime);z-index:1;
-  transform:scaleY(0);transform-origin:var(--org,50% 100%);transition:transform .38s var(--ease)}
-.btn:hover{color:var(--ink)}
-.btn:hover::before{transform:scaleY(1)}
-.btn:active{transform:scale(.978)}
-.btn.fill{background:var(--lime);color:var(--ink);border-color:var(--lime)}
-.btn.fill::before{background:var(--ink)}
-.btn.fill:hover{color:var(--lime);border-color:var(--ink)}
-.btn.sm{padding:9px 17px;font-size:.82rem}
-
-/* ============ hero ============ */
-.hero{background:var(--ink);color:var(--cream);min-height:100dvh;display:flex;align-items:center;
-  padding:clamp(48px,9vh,110px) 0;position:relative;overflow:hidden}
-.hero-in{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(26px,4vw,80px);align-items:center;width:100%}
-@media(max-width:940px){.hero{min-height:auto}.hero-in{grid-template-columns:1fr;gap:44px}}
-
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.79rem;color:var(--mid-dark);
-  font-variation-settings:'wdth' 96,'wght' 550;margin-bottom:22px;opacity:0;transform:translateY(10px)}
-.eyebrow s{width:22px;height:1.5px;background:var(--lime);text-decoration:none;display:block}
-.lit .eyebrow{animation:fadeUp .7s var(--ease) .1s forwards}
-
-.ln{display:block;overflow:hidden;padding-bottom:.04em}
-.ln>i{display:block;font-style:normal;transform:translateY(110%);transition:transform 1.05s var(--ease)}
-.lit .ln>i{transform:translateY(0)}
-.lit .ln:nth-of-type(2)>i{transition-delay:.1s}
-.lit .ln:nth-of-type(3)>i{transition-delay:.2s}
-
-.hero p.sub{margin-top:24px;font-size:clamp(1rem,1.25vw,1.14rem);color:var(--mid-dark);max-width:46ch;opacity:0;transform:translateY(14px)}
-.lit p.sub{animation:fadeUp .8s var(--ease) .52s forwards}
-.hero-cta{margin-top:34px;display:flex;gap:11px;flex-wrap:wrap;opacity:0;transform:translateY(14px)}
-.lit .hero-cta{animation:fadeUp .8s var(--ease) .66s forwards}
-@keyframes fadeUp{to{opacity:1;transform:none}}
-
-.hero-mark{justify-self:end;width:min(100%,420px);opacity:0}
-.lit .hero-mark{animation:fadeUp .5s var(--ease) .3s forwards}
-.hero-mark svg{width:100%;height:auto;overflow:visible;display:block}
-@media(max-width:940px){.hero-mark{justify-self:start;width:min(72%,320px)}}
-
-.stats{margin-top:clamp(34px,5vh,58px);border-top:1px solid var(--line-dark);padding-top:20px;
-  display:grid;grid-template-columns:repeat(3,auto);gap:clamp(20px,4vw,60px);justify-content:start;opacity:0;transform:translateY(14px)}
-.lit .stats{animation:fadeUp .8s var(--ease) .8s forwards}
-.stats b{display:block;font-variation-settings:'wdth' 116,'wght' 780;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.045em;line-height:1;color:var(--cream)}
-.stats s{display:block;text-decoration:none;font-size:.76rem;color:var(--mid-dark);margin-top:6px;max-width:15ch}
-
-/* ============ marquee ============ */
-.mq{background:var(--lime);color:var(--ink);overflow:hidden;display:flex;padding:11px 0;user-select:none;border-block:1px solid var(--ink)}
-.mq-t{display:flex;gap:30px;padding-right:30px;flex:none;white-space:nowrap;align-items:center;
-  font-variation-settings:'wdth' 104,'wght' 700;font-size:clamp(.85rem,1.15vw,1.02rem);letter-spacing:-.02em;
-  animation:slide 30s linear infinite}
-.mq:hover .mq-t{animation-play-state:paused}
-.mq-t u{text-decoration:none;opacity:.42}
-@keyframes slide{to{transform:translateX(-100%)}}
-
-/* ============ sections ============ */
-section{padding:clamp(64px,9vw,132px) 0}
-.dark{background:var(--ink);color:var(--cream)}
-.head{display:grid;grid-template-columns:minmax(0,auto) 1fr;gap:18px;align-items:end;
-  padding-bottom:20px;margin-bottom:clamp(34px,5vw,62px);border-bottom:1px solid var(--line-light)}
-.dark .head{border-color:var(--line-dark)}
-.head .n{font-size:.78rem;color:var(--mid-light);font-variation-settings:'wdth' 92,'wght' 550;padding-bottom:7px;white-space:nowrap}
-.dark .head .n{color:var(--mid-dark)}
-.rv{clip-path:inset(0 100% 0 0);transition:clip-path 1.05s var(--ease)}
-.rv.on{clip-path:inset(0 0 0 0)}
-.up{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0)*90ms)}
-.up.on{opacity:1;transform:none}
-
-/* ============ zig-zag rules ============ */
-.zig{display:grid;gap:1px;background:var(--line-light)}
-.zag{background:var(--cream);display:grid;grid-template-columns:1.1fr 1.9fr;gap:clamp(18px,4vw,64px);
-  padding:clamp(30px,4vw,54px) 0;align-items:start;transition:background .3s var(--ease)}
-.zag:nth-child(even){grid-template-columns:1.9fr 1.1fr}
-.zag:nth-child(even) .zag-t{order:2}
-.zag:nth-child(even) .zag-b{order:1}
-@media(max-width:820px){.zag,.zag:nth-child(even){grid-template-columns:1fr;gap:14px;padding:28px 0}
-  .zag:nth-child(even) .zag-t,.zag:nth-child(even) .zag-b{order:0}}
-.zag-t{display:flex;gap:14px;align-items:flex-start}
-.zag-t svg{width:30px;flex:none;overflow:visible;margin-top:3px}
-.zag-b p{color:var(--mid-light);font-size:1.02rem}
-
-/* ============ process with drawn path ============ */
-.proc{display:grid;grid-template-columns:52px 1fr;gap:clamp(16px,3vw,40px)}
-@media(max-width:700px){.proc{grid-template-columns:26px 1fr;gap:16px}}
-.spine{position:relative}
-.spine svg{width:100%;height:100%;overflow:visible;display:block}
-.spine .track{stroke:var(--line-dark);stroke-width:2}
-.spine .fillline{stroke:var(--lime);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:1;
-  transition:stroke-dashoffset .1s linear}
-.pstep{display:grid;grid-template-columns:2.1fr 1fr;gap:clamp(14px,3vw,44px);
-  padding:clamp(26px,3.4vw,44px) 0;border-bottom:1px solid var(--line-dark);align-items:start}
-.pstep:first-child{padding-top:0}
-@media(max-width:700px){.pstep{grid-template-columns:1fr;gap:10px}}
-.pstep .k{display:flex;align-items:baseline;gap:13px;margin-bottom:9px}
-.pstep .k em{font-style:normal;color:var(--lime);font-variation-settings:'wdth' 116,'wght' 800;font-size:1.05rem;letter-spacing:-.04em}
-.pstep p{color:var(--mid-dark)}
-.pstep .when{font-size:.87rem;color:var(--mid-dark);padding-top:2px}
-@media(min-width:701px){.pstep .when{text-align:right}}
-
-/* ============ pricing, no card kit ============ */
-.plans{display:grid;grid-template-columns:1fr 1.22fr 1fr;gap:0;border-top:1.5px solid var(--ink)}
-@media(max-width:940px){.plans{grid-template-columns:1fr;border-top:0}}
-.plan{padding:clamp(24px,2.4vw,34px) clamp(18px,2vw,28px);border-right:1px solid var(--line-light);
-  display:flex;flex-direction:column}
-.plan:last-child{border-right:0}
-@media(max-width:940px){.plan{border-right:0;border-top:1.5px solid var(--ink)}}
-.plan.hero-plan{background:var(--lime);margin-top:-1.5px;border-top:1.5px solid var(--ink);
-  border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
-.plan .tag{font-size:.72rem;font-variation-settings:'wdth' 96,'wght' 680;color:var(--mid-light);
-  display:flex;align-items:center;gap:8px;margin-bottom:16px;min-height:17px}
-.plan.hero-plan .tag{color:var(--ink)}
-.plan .tag i{width:6px;height:6px;background:var(--ink);display:block;flex:none}
-.price{font-variation-settings:'wdth' 118,'wght' 800;font-size:clamp(2rem,3.3vw,2.75rem);
-  letter-spacing:-.05em;line-height:1;margin:12px 0 5px}
-.price small{font-size:.78rem;letter-spacing:-.01em;font-variation-settings:'wdth' 100,'wght' 550;color:var(--mid-light)}
-.plan .who{font-size:.85rem;color:var(--mid-light);margin-bottom:22px;min-height:2.6em}
-.spec{list-style:none;margin:0 0 26px;flex:1}
-.spec li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;
-  border-bottom:1px solid var(--line-light);font-size:.845rem;color:var(--mid-light)}
-.plan.hero-plan .spec li{border-color:rgba(21,21,21,.22);color:#4A5227}
-.spec li b{font-variation-settings:'wdth' 102,'wght' 660;color:var(--ink);text-align:right}
-.plan .btn{width:100%}
-
-.fine{margin-top:26px;display:grid;gap:12px}
-.fine div{display:grid;grid-template-columns:16px 1fr;gap:11px;font-size:.86rem;color:var(--mid-light);align-items:start}
-.fine i{width:7px;height:7px;background:var(--lime);border:1px solid var(--ink);margin-top:6px;display:block}
-
-/* ============ audit, asymmetric ============ */
-.audit{display:grid;grid-template-columns:1fr 1.7fr;gap:clamp(24px,5vw,80px);align-items:start}
-@media(max-width:900px){.audit{grid-template-columns:1fr;gap:32px}}
-.audit .big{font-variation-settings:'wdth' 118,'wght' 800;font-size:clamp(3.4rem,8vw,6rem);
-  letter-spacing:-.06em;line-height:.82;color:var(--lime)}
-.audit .lead{color:var(--mid-dark);margin-top:16px;font-size:.95rem}
-.audit .big s.was{text-decoration:line-through;text-decoration-thickness:2px;color:var(--mid-dark);
-  font-size:.40em;margin-right:.3em;vertical-align:.3em;letter-spacing:-.03em}
-.btn>span{text-align:center;line-height:1.25}
-.gets{list-style:none;display:grid;gap:1px;background:var(--line-dark);border-block:1px solid var(--line-dark);margin:26px 0}
-.gets li{background:var(--ink);display:grid;grid-template-columns:26px 1fr;gap:14px;padding:16px 0;font-size:.98rem;align-items:start}
-.gets li em{font-style:normal;color:var(--lime);font-variation-settings:'wdth' 110,'wght' 760;font-size:.86rem}
-.credit{border:1.5px solid var(--lime);padding:18px 20px;font-size:.94rem;color:var(--cream);display:flex;gap:14px;align-items:flex-start}
-.credit b{color:var(--lime);font-variation-settings:'wdth' 106,'wght' 740;white-space:nowrap}
-
-/* ============ terms, divide only ============ */
-.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line-light)}
-@media(max-width:900px){.terms{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.terms{grid-template-columns:1fr}}
-.tm{padding:26px 24px 26px 0;border-right:1px solid var(--line-light);border-bottom:1px solid var(--line-light)}
-.tm:last-child{border-right:0}
-@media(max-width:900px){.tm:nth-child(2n){border-right:0}}
-@media(max-width:560px){.tm{border-right:0;padding-right:0}}
-.tm b{display:block;font-variation-settings:'wdth' 108,'wght' 730;font-size:1rem;margin-bottom:8px;letter-spacing:-.02em}
-.tm span{font-size:.87rem;color:var(--mid-light)}
-
-/* ============ faq ============ */
-.faq{border-top:1px solid var(--line-light)}
-.q{border-bottom:1px solid var(--line-light)}
-.q>summary{list-style:none;cursor:pointer;padding:21px 46px 21px 0;position:relative;
-  font-variation-settings:'wdth' 106,'wght' 700;font-size:clamp(.98rem,1.5vw,1.14rem);letter-spacing:-.024em;
-  transition:color .25s var(--ease)}
-.q>summary::-webkit-details-marker{display:none}
-.q>summary:hover{color:var(--mid-light)}
-.q>summary::after,.q>summary::before{content:"";position:absolute;right:4px;top:50%;background:currentColor;transition:transform .3s var(--ease),opacity .3s var(--ease)}
-.q>summary::after{width:13px;height:1.8px;transform:translateY(-50%)}
-.q>summary::before{width:1.8px;height:13px;right:9.6px;transform:translateY(-50%)}
-.q[open]>summary::before{transform:translateY(-50%) rotate(90deg);opacity:0}
-.ans{overflow:hidden;max-height:0;transition:max-height .48s var(--ease)}
-.ans p{padding:0 0 24px;color:var(--mid-light);max-width:70ch}
-
-/* ============ form ============ */
-.form-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(26px,5vw,84px);align-items:start}
-@media(max-width:900px){.form-grid{grid-template-columns:1fr;gap:34px}}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:620px){.f-row{grid-template-columns:1fr}}
-.field{display:grid;gap:7px;margin-bottom:18px}
-.field label{font-size:.83rem;font-variation-settings:'wdth' 100,'wght' 620;color:var(--cream)}
-.field label s{text-decoration:none;color:var(--lime)}
-.field .hint{font-size:.76rem;color:var(--mid-dark)}
-.field input,.field select,.field textarea{
-  background:var(--ink-2);border:1.5px solid var(--line-dark);color:var(--cream);
-  font:inherit;font-size:.94rem;padding:12px 14px;width:100%;
-  transition:border-color .25s var(--ease),background .25s var(--ease)}
-.field textarea{resize:vertical;min-height:104px}
-.field select{appearance:none;cursor:pointer;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%23D8F26B' stroke-width='1.6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--lime);outline:none;background:var(--ink)}
-.field .err{font-size:.78rem;color:#F2A56B;display:none}
-.field.bad input,.field.bad select,.field.bad textarea{border-color:#F2A56B}
-.field.bad .err{display:block}
-.f-note{font-size:.8rem;color:var(--mid-dark);margin-top:6px}
-
-.skel{display:none;gap:10px;margin-top:18px}
-.skel span{height:11px;background:linear-gradient(90deg,var(--ink-3) 8%,#3C3C38 22%,var(--ink-3) 36%);
-  background-size:900px 100%;animation:shim 1.5s linear infinite;display:block}
-.skel span:nth-child(1){width:74%}.skel span:nth-child(2){width:52%}.skel span:nth-child(3){width:63%}
-@keyframes shim{to{background-position:900px 0}}
-.sending .skel{display:grid}
-.sending .f-body{opacity:.32;pointer-events:none}
-
-.done{display:none;border:1.5px solid var(--lime);padding:26px;align-items:flex-start;gap:16px}
-.done svg{flex:none;margin-top:2px}
-.done b{display:block;font-variation-settings:'wdth' 108,'wght' 740;margin-bottom:6px}
-.done p{color:var(--mid-dark);font-size:.92rem}
-.sent .done{display:flex}
-.sent .f-body,.sent .skel{display:none}
-
-/* ============ footer ============ */
-footer{background:var(--ink);color:var(--cream);border-top:1px solid var(--line-dark);padding:clamp(40px,6vw,68px) 0 34px}
-.f-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding-bottom:38px;border-bottom:1px solid var(--line-dark)}
-@media(max-width:820px){.f-top{grid-template-columns:1fr 1fr;gap:26px}}
-@media(max-width:520px){.f-top{grid-template-columns:1fr}}
-.f-top svg{height:56px;width:auto;overflow:visible;margin-bottom:16px}
-.f-col b{display:block;font-size:.76rem;color:var(--mid-dark);font-variation-settings:'wdth' 94,'wght' 600;margin-bottom:13px}
-.f-col a{display:block;text-decoration:none;font-size:.9rem;padding:4px 0;color:var(--cream);opacity:.82;transition:opacity .25s,color .25s}
-.f-col a:hover{opacity:1;color:var(--lime)}
-.f-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:.79rem;color:var(--mid-dark)}
-
-
-/* ============ lime section ============ */
-.limes{background:var(--lime);color:var(--ink)}
-.limes .head{border-color:rgba(21,21,21,.3)}
-.limes .head .n{color:#525C29}
-
-/* ============ radovi, masonry collage ============ */
-.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:24px}
-.fbtn{background:transparent;border:1.5px solid var(--line-dark);color:var(--mid-dark);font:inherit;
-  font-size:.82rem;font-variation-settings:'wdth' 100,'wght' 620;padding:8px 16px;cursor:pointer;
-  transition:color .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease),transform .16s var(--ease)}
-.fbtn:hover{color:var(--cream);border-color:var(--mid-dark)}
-.fbtn:active{transform:scale(.97)}
-.fbtn[aria-pressed="true"]{background:var(--lime);border-color:var(--lime);color:var(--ink)}
-.fcount{opacity:.5;margin-left:6px;font-variation-settings:'wght' 500}
-
-.collage{columns:4;column-gap:10px}
-@media(max-width:1140px){.collage{columns:3}}
-@media(max-width:780px){.collage{columns:2}}
-@media(max-width:430px){.collage{columns:1}}
-
-.tile{break-inside:avoid;margin:0 0 10px;position:relative;overflow:hidden;background:var(--ink-2);
-  border:1px solid var(--line-dark);display:block;
-  opacity:0;transform:translateY(22px) scale(.975);
-  transition:opacity .7s var(--ease),transform .7s var(--ease),border-color .3s var(--ease)}
-.tile.on{opacity:1;transform:none}
-.tile:hover{border-color:var(--lime)}
-.tile .media{position:relative;display:block;width:100%;overflow:hidden}
-.tile img,.tile video{width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform .8s var(--ease)}
-.tile:hover img,.tile:hover video{transform:scale(1.05)}
-
-/* branded empty slot, used until real files are dropped in */
-.slot{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:13px;
-  background:
-    repeating-linear-gradient(-45deg,rgba(216,242,107,.05) 0 2px,transparent 2px 9px),
-    var(--ink-2)}
-.slot .hk{font-size:.74rem;line-height:1.35;color:var(--cream);opacity:.62;max-width:22ch;
-  font-variation-settings:'wdth' 96,'wght' 600}
-.slot svg{width:26px;overflow:visible;opacity:.85}
-
-.tile .chip{position:absolute;right:9px;top:9px;background:var(--ink);color:var(--mid-dark);
-  font-size:.6rem;padding:3px 7px;font-variation-settings:'wdth' 90,'wght' 620;letter-spacing:.02em;z-index:2}
-.tile.vid .chip{background:var(--lime);color:var(--ink)}
-.tile .bar{display:flex;justify-content:space-between;align-items:center;gap:10px;
-  padding:10px 12px;border-top:1px solid var(--line-dark);font-size:.74rem;color:var(--mid-dark)}
-.tile .bar b{font-variation-settings:'wdth' 100,'wght' 640;color:var(--cream);
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tile .bar s{text-decoration:none;flex:none;opacity:.7}
-
-.empty{display:none;border:1.5px dashed var(--line-dark);padding:44px 28px;text-align:left}
-.empty.show{display:block}
-.empty b{display:block;font-variation-settings:'wdth' 108,'wght' 730;font-size:1.05rem;margin-bottom:8px}
-.empty p{color:var(--mid-dark);font-size:.92rem;margin-bottom:18px}
-
-/* ============ rezultati ============ */
-.cases{border-top:1.5px solid var(--ink)}
-.case{display:grid;grid-template-columns:.95fr 2.15fr 1fr;gap:clamp(18px,3.5vw,56px);
-  padding:clamp(26px,3.6vw,46px) 0;border-bottom:1px solid rgba(21,21,21,.26);align-items:start}
-@media(max-width:900px){.case{grid-template-columns:1fr;gap:16px}}
-.c-big{font-variation-settings:'wdth' 118,'wght' 800;font-size:clamp(2.6rem,5.4vw,4.2rem);
-  letter-spacing:-.055em;line-height:.85}
-.c-cap{display:block;font-size:.78rem;color:#4E5726;margin-top:9px;max-width:17ch;
-  font-variation-settings:'wdth' 96,'wght' 600}
-.case h3{margin-bottom:9px}
-.case p{color:#3F4622;font-size:.96rem;max-width:52ch}
-.c-side{display:grid;gap:14px}
-@media(max-width:900px){.c-side{grid-template-columns:1fr 1fr;gap:14px 26px}}
-.c-side div b{display:block;font-variation-settings:'wdth' 114,'wght' 780;font-size:1.4rem;letter-spacing:-.04em;line-height:1}
-.c-side div s{display:block;text-decoration:none;font-size:.76rem;color:#4E5726;margin-top:5px}
-.res-note{margin-top:26px;font-size:.82rem;color:#4E5726;max-width:70ch}
+/* ---------- footer ---------- */
+.ftr{border-top:1px solid var(--hair);padding-block:48px 36px}
+.ftr-top{display:flex;justify-content:space-between;align-items:flex-start;gap:36px;flex-wrap:wrap}
+.ftr .brand svg{height:26px}
+.ftr .claim{color:var(--muted);margin-top:14px;font-size:15px}
+.ftr nav{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:15px}
+.ftr nav a{color:rgba(244,240,232,.8)} .ftr nav a:hover{color:var(--cream)}
+.ftr-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:22px;border-top:1px solid var(--hair);
+         color:var(--muted);font-size:13.5px}
 
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  .rv{clip-path:none}.up{opacity:1;transform:none}.ln>i{transform:none}
-  .mk rect.f{stroke-dashoffset:0}.mk .lime{transform:none;opacity:1}
-  .tile{opacity:1;transform:none}
-  .eyebrow,.hero p.sub,.hero-cta,.stats,.hero-mark{opacity:1;transform:none}
+  .hdr .mk-f rect,.hdr .mk-w{animation:none}
+  .tile.win{animation:none;transform:translateY(-14px)}
+  .ribbon .track{animation:none}
+  html{scroll-behavior:auto}
 }
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
+
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
-<div id="prog" aria-hidden="true"></div>
-
-<nav>
-  <div class="nav-in">
-    <a href="#top" class="brand" aria-label="BALKAN / AD STUDIO, početna">
-      <svg viewBox="0 -15.18 128.57 115.18" class="mk on-ink go" aria-hidden="true">
-        <rect class="f" style="--i:0" x="3.5" y="3.5" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:1" x="49.929" y="3.5" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:2" x="3.5" y="58.857" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:3" x="49.929" y="58.857" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:4" x="96.357" y="58.857" width="28.714" height="37.643"/>
-        <rect class="lime" x="92.857" y="-15.179" width="35.714" height="44.643"/>
-      </svg>
-      <b>BALKAN<em>/</em><i>AD STUDIO</i></b>
-    </a>
-    <div class="nav-links">
-      <a href="#radovi">Radovi</a>
-      <a href="#rezultati">Rezultati</a>
-      <a href="#proces">Proces</a>
-      <a href="#paketi">Paketi</a>
-      <a href="#kontakt" class="btn fill sm magnet"><span>Zakažite poziv</span></a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="wrap hero-in">
-    <div>
-      <div class="eyebrow"><s></s>Beograd / performance kreativa</div>
-      <h1>
-        <span class="ln"><i>Trideset varijanti.</i></span>
-        <span class="ln"><i>Jedan pobednik.</i></span>
-        <span class="ln"><i>Svakog meseca.</i></span>
-      </h1>
-      <p class="sub">Statični oglasi i AI UGC videi za e-commerce brendove u Srbiji. Isporuka po fiksnom roku, bez kastinga, bez snimanja, bez produkcijskog dana.</p>
-      <div class="hero-cta">
-        <a href="#kontakt" class="btn fill magnet"><span>Zakažite poziv</span></a>
-        <a href="#paketi" class="btn magnet"><span>Pogledajte pakete</span></a>
-      </div>
-      <div class="stats">
-        <div><b data-count="50">0</b><s>kreativa mesečno, paket Skala</s></div>
-        <div><b data-count="5" data-suffix=" dana">0</b><s>rok isporuke, zapisan u ponudi</s></div>
-        <div><b data-count="8" data-prefix="do ">0</b><s>aktivnih brendova, tvrd kapacitet</s></div>
-      </div>
-    </div>
-
-    <div class="hero-mark" aria-hidden="true">
-      <svg viewBox="0 -15.18 128.57 115.18" class="mk on-ink" id="bigmark">
-        <rect class="f" style="--i:0" x="3.5" y="3.5" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:1" x="49.929" y="3.5" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:2" x="3.5" y="58.857" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:3" x="49.929" y="58.857" width="28.714" height="37.643"/>
-        <rect class="f" style="--i:4" x="96.357" y="58.857" width="28.714" height="37.643"/>
-        <rect class="lime" x="92.857" y="-15.179" width="35.714" height="44.643"/>
-      </svg>
-    </div>
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Balkan / Ad Studio — početak"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0.00 -15.18 1238.21 115.18" role="img" aria-label="BALKAN / AD STUDIO"><g><g class="mk-f" fill="none" stroke="#F4F0E8" stroke-width="7.00"><rect class="f1" x="3.500" y="3.500" width="28.714" height="37.643"/><rect class="f2" x="49.929" y="3.500" width="28.714" height="37.643"/><rect class="f3" x="3.500" y="58.857" width="28.714" height="37.643"/><rect class="f4" x="49.929" y="58.857" width="28.714" height="37.643"/><rect class="f5" x="96.357" y="58.857" width="28.714" height="37.643"/></g><g class="mk-w" fill="#D8F26B"><rect x="92.857" y="-15.179" width="35.714" height="44.643"/></g></g><g transform="translate(170.57,0)"><path d="M78.80 51.25 81.28 45.57Q92.72 45.92 100.31 49.17Q107.89 52.43 111.64 58.13Q115.39 63.84 115.39 71.60Q115.39 79.71 111.69 86.16Q108.00 92.61 100.56 96.31Q93.12 100.00 81.97 100.00H5.81L13.47 48.67L5.81 0.00H79.25Q93.12 0.00 100.92 6.47Q108.72 12.93 108.72 24.37Q108.72 30.80 105.80 36.52Q102.88 42.24 96.33 46.17Q89.79 50.11 78.80 51.25ZM36.24 93.04 24.43 78.93H72.83Q78.00 78.93 80.95 76.31Q83.89 73.68 83.89 69.07Q83.89 64.69 80.84 61.84Q77.79 58.99 71.84 58.99H31.60V38.35H67.44Q71.63 38.35 74.43 35.85Q77.23 33.36 77.23 29.23Q77.23 25.68 74.75 23.37Q72.27 21.07 67.71 21.07H24.53L36.24 6.96L43.09 48.67Z M147.13 81.97V57.20H215.61V81.97ZM202.49 0.00 247.18 100.00H214.09L177.74 13.49H186.14L149.79 100.00H116.70L161.39 0.00Z M284.28 0.00V86.27L270.33 72.37H344.92V100.00H253.24V0.00Z M353.67 100.00V0.00H384.50V75.60L376.50 69.07L429.67 0.00H462.29L381.78 100.00ZM401.59 53.15 424.34 34.83 463.65 100.00H428.47Z M490.43 81.97V57.20H558.91V81.97ZM545.79 0.00 590.48 100.00H557.39L521.04 13.49H529.44L493.09 100.00H460.00L504.69 0.00Z M689.21 77.81 680.30 79.79V0.00H710.38V100.00H671.45L617.74 20.32L626.62 18.35V100.00H596.54V0.00H636.65Z" fill="#F4F0E8"/><g transform="translate(738.97,70.00)"><path d="M3.57 35.93 18.05 -2.66H22.22L7.74 35.93Z" fill="#D8F26B"/><path d="M19.86 30.00 17.58 22.01H8.04L5.76 30.00H0.86L9.63 0.00H16.20L24.97 30.00ZM12.98 4.86H12.64L8.94 18.01H16.68Z M33.81 0.00H42.75Q48.51 0.00 51.28 3.83Q54.06 7.65 54.06 15.00Q54.06 22.35 51.28 26.17Q48.51 30.00 42.75 30.00H33.81ZM42.45 26.05Q45.76 26.05 47.37 23.83Q48.98 21.62 48.98 17.49V12.51Q48.98 8.38 47.37 6.17Q45.76 3.95 42.45 3.95H38.58V26.05Z M103.50 30.52Q99.59 30.52 96.92 29.14Q94.26 27.77 92.54 25.49L95.63 22.52Q97.35 24.58 99.29 25.55Q101.22 26.52 103.67 26.52Q106.51 26.52 108.03 25.23Q109.56 23.94 109.56 21.53Q109.56 19.60 108.44 18.55Q107.33 17.49 104.62 17.02L101.35 16.50Q99.20 16.16 97.74 15.37Q96.28 14.57 95.38 13.47Q94.47 12.38 94.07 11.02Q93.66 9.67 93.66 8.17Q93.66 3.91 96.41 1.70Q99.16 -0.52 103.97 -0.52Q107.54 -0.52 110.05 0.62Q112.57 1.76 114.12 3.83L111.11 6.83Q109.86 5.33 108.16 4.41Q106.47 3.48 103.97 3.48Q101.31 3.48 99.91 4.62Q98.51 5.76 98.51 7.95Q98.51 9.80 99.61 10.85Q100.71 11.91 103.50 12.38L106.68 12.94Q110.72 13.67 112.57 15.88Q114.42 18.09 114.42 21.28Q114.42 23.34 113.71 25.06Q113.00 26.78 111.60 27.98Q110.20 29.18 108.16 29.85Q106.12 30.52 103.50 30.52Z M136.45 4.04V30.00H131.64V4.04H122.23V0.00H145.87V4.04Z M159.22 0.00V18.44Q159.22 20.29 159.33 21.79Q159.43 23.30 159.95 24.35Q160.47 25.40 161.50 25.96Q162.53 26.52 164.33 26.52Q166.14 26.52 167.17 25.96Q168.20 25.40 168.72 24.35Q169.23 23.30 169.34 21.79Q169.45 20.29 169.45 18.44V0.00H174.26V17.58Q174.26 20.80 173.90 23.23Q173.53 25.66 172.46 27.27Q171.38 28.88 169.43 29.70Q167.47 30.52 164.33 30.52Q161.20 30.52 159.24 29.70Q157.29 28.88 156.21 27.27Q155.14 25.66 154.77 23.23Q154.41 20.80 154.41 17.58V0.00Z M185.25 0.00H194.19Q199.95 0.00 202.72 3.83Q205.50 7.65 205.50 15.00Q205.50 22.35 202.72 26.17Q199.95 30.00 194.19 30.00H185.25ZM193.89 26.05Q197.20 26.05 198.81 23.83Q200.42 21.62 200.42 17.49V12.51Q200.42 8.38 198.81 6.17Q197.20 3.95 193.89 3.95H190.02V26.05Z M215.45 30.00V26.35H222.50V3.65H215.45V0.00H234.37V3.65H227.32V26.35H234.37V30.00Z M255.20 30.52Q252.36 30.52 250.28 29.46Q248.19 28.41 246.84 26.43Q245.48 24.46 244.84 21.58Q244.19 18.70 244.19 15.00Q244.19 11.35 244.84 8.45Q245.48 5.54 246.84 3.57Q248.19 1.59 250.28 0.54Q252.36 -0.52 255.20 -0.52Q258.03 -0.52 260.12 0.54Q262.20 1.59 263.56 3.57Q264.91 5.54 265.56 8.45Q266.20 11.35 266.20 15.00Q266.20 18.70 265.56 21.58Q264.91 24.46 263.56 26.43Q262.20 28.41 260.12 29.46Q258.03 30.52 255.20 30.52ZM255.20 26.52Q258.42 26.52 259.75 24.09Q261.09 21.66 261.09 17.49V12.46Q261.09 8.34 259.75 5.91Q258.42 3.48 255.20 3.48Q251.97 3.48 250.64 5.91Q249.31 8.34 249.31 12.46V17.54Q249.31 21.66 250.64 24.09Q251.97 26.52 255.20 26.52Z" fill="#F4F0E8" transform="translate(60.58,0)"/></g></g>
+</svg></a>
+    <button class="menu-btn" type="button" id="menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M1 4h16M1 9h16M1 14h16" stroke="currentColor" stroke-width="1.8"/></svg><span>Meni</span></button>
+    <nav class="nav" id="nav" aria-label="Glavna navigacija">
+      <a class="lnk" href="#radovi">Radovi</a>
+      <a class="lnk" href="#rezultati">Rezultati</a>
+      <a class="lnk" href="#proces">Proces</a>
+      <a class="lnk" href="#paketi">Paketi</a>
+      <a class="btn btn-lime" href="mailto:hello@balkancreative.studio?subject=Srbija%20%E2%80%94%20Uvodni%20poziv">Zakažite uvodni poziv</a>
+    </nav>
   </div>
 </header>
 
-<div class="mq" aria-hidden="true">
-  <div class="mq-t"><span>Statični oglasi</span><u>/</u><span>AI UGC video</span><u>/</u><span>Hook varijante</span><u>/</u><span>1:1</span><u>/</u><span>4:5</span><u>/</u><span>9:16</span><u>/</u><span>16:9</span><u>/</u><span>Meta Ads</span><u>/</u><span>Mesečna rotacija</span><u>/</u></div>
-  <div class="mq-t"><span>Statični oglasi</span><u>/</u><span>AI UGC video</span><u>/</u><span>Hook varijante</span><u>/</u><span>1:1</span><u>/</u><span>4:5</span><u>/</u><span>9:16</span><u>/</u><span>16:9</span><u>/</u><span>Meta Ads</span><u>/</u><span>Mesečna rotacija</span><u>/</u></div>
-</div>
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Kreativa za e-commerce</p>
+      <h1 id="h1">50 kreativa mesečno. Jedan cilj: oglasi koji prodaju.</h1>
+      <p class="lead">Statični oglasi i AI UGC video, kreirani i isporučeni za e-commerce brendove u Srbiji. Koncepti, hookovi i svi formati — u roku od 5 radnih dana.</p>
+      <div class="ctas">
+        <a class="btn btn-lime" href="mailto:hello@balkancreative.studio?subject=Srbija%20%E2%80%94%20Uvodni%20poziv">Zakažite uvodni poziv</a>
+        <a class="btn btn-line" href="#radovi">Pogledajte naše radove</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="10"/><rect x="17" y="3" width="10" height="10"/><rect x="31" y="3" width="10" height="10"/><rect x="3" y="17" width="10" height="10"/><rect x="17" y="17" width="10" height="10"/><rect x="31" y="17" width="10" height="10"/><rect x="3" y="31" width="10" height="10"/><rect x="17" y="31" width="10" height="10"/></g><rect x="31" y="31" width="10" height="10" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg><b>50</b><span>kreativa mesečno, paket Skala</span></div>
+        <div class="stat"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1.5" y="18" width="6.5" height="12"/><rect x="10.5" y="18" width="6.5" height="12"/><rect x="19.5" y="18" width="6.5" height="12"/><rect x="28.5" y="18" width="6.5" height="12"/></g><rect x="37.5" y="11" width="6" height="12" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg><b>5 dana</b><span>od brief-a do isporuke</span></div>
+        <div class="stat"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="14.2" width="36" height="4.6"/><rect x="4" y="21.4" width="36" height="4.6"/><rect x="4" y="28.6" width="36" height="4.6"/><rect x="4" y="35.8" width="36" height="4.6"/></g><rect x="4" y="7" width="36" height="4.6" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg><b>5 × 10</b><span>nivoa svesnosti × uglova po nivou</span></div>
+      </div>
+    </div>
+    <div class="tiles" aria-label="Primeri kreativa za demo brendove"><figure class="tile"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/naocare-stil.jpg" alt="Žena sa sunčanim naočarima na ulici: Stil koji traje" width="1280" height="720" fetchpriority="high" decoding="async"></figure><figure class="tile win"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/voltr-creatine.jpg" alt="Kreatin monohidrat VOLTR na kamenu u dimu, oznaka Winner" width="1280" height="720" fetchpriority="high" decoding="async"></figure><figure class="tile"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/lume-serum-ugc.jpg" alt="Ruka drži LUMÉ serum: Vidljivi rezultati za 3 nedelje" width="1280" height="720" loading="lazy" decoding="async"></figure><figure class="tile"><div class="lbl"><span class="tag">Statični</span><span class="fmt">16:9</span></div><img src="photo/ranac-grad.jpg" alt="Muškarac sa crnim rancem ispred grada: Idealno za grad i putovanja" width="1280" height="720" loading="lazy" decoding="async"></figure><figure class="tile"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/med-malina-ugc.jpg" alt="Tegla meda sa malinom, Pčelinjak Petrović: Slatko iz prirode" width="1280" height="720" loading="lazy" decoding="async"></figure><figure class="tile"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/rakija-dunja-ugc.jpg" alt="Glinena čašica rakije od dunje: Duh tradicije" width="1280" height="720" loading="lazy" decoding="async"></figure></div>
+  </div>
+  <div class="ribbon" aria-label="Statični oglasi, AI UGC video, hook varijante, formati 1:1, 4:5, 9:16 i 16:9, Meta Ads, mesečna rotacija"><div class="track" aria-hidden="true"><span>Statični oglasi <i>/</i> AI UGC video <i>/</i> Hook varijante <i>/</i> 1:1 <i>/</i> 4:5 <i>/</i> 9:16 <i>/</i> 16:9 <i>/</i> Meta Ads <i>/</i> Mesečna rotacija</span><i>/</i><span>Statični oglasi <i>/</i> AI UGC video <i>/</i> Hook varijante <i>/</i> 1:1 <i>/</i> 4:5 <i>/</i> 9:16 <i>/</i> 16:9 <i>/</i> Meta Ads <i>/</i> Mesečna rotacija</span><i>/</i></div></div>
+</section>
 
-<section id="model">
+<section class="work" id="radovi" aria-labelledby="h-radovi">
   <div class="wrap">
-    <div class="head"><span class="n rv">01 Model</span><h2 class="rv">Ne kupujete fajlove. Kupujete brzinu testiranja.</h2></div>
-    <div class="zig">
-      <div class="zag up" style="--i:0">
-        <div class="zag-t">
-          <svg viewBox="0 -15.18 128.57 115.18" class="mk on-cream" aria-hidden="true"><rect class="f" style="--i:0" x="3.5" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:1" x="49.929" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:2" x="3.5" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:3" x="49.929" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:4" x="96.357" y="58.857" width="28.714" height="37.643"/><rect class="lime" x="92.857" y="-15.179" width="35.714" height="44.643"/></svg>
-          <h3>Brojimo koncepte, ne fajlove</h3>
-        </div>
-        <div class="zag-b"><p>Jedan koncept je ideja, plus hook varijante, plus svi formati. Vi dobijate desetine fajlova, mi isporučujemo koncepte. Zato cena po fajlu ovde nije merilo, a poređenje sa frilenserom po komadu ne opisuje isti posao.</p></div>
+    <div class="work-head">
+      <div class="t">
+        <p class="eyebrow"><svg class="ico" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="11" width="9" height="11"/><rect x="15" y="11" width="9" height="11"/><rect x="2" y="26" width="9" height="11"/><rect x="15" y="26" width="9" height="11"/><rect x="28" y="26" width="9" height="11"/></g><rect x="28" y="7" width="9" height="11" fill="currentColor" stroke="currentColor" stroke-width="2.2"/></svg>Radovi</p>
+        <h2 id="h-radovi">Kreative koje se testiraju. Oglasi koji se skaliraju.</h2>
+        <p class="sub">Naš mesečni sistem testiranja kreativa — od prvog hooka do pobedničkog oglasa. Brzo, fokusirano, na podacima.</p>
       </div>
-      <div class="zag up" style="--i:1">
-        <div class="zag-t">
-          <svg viewBox="0 -15.18 128.57 115.18" class="mk on-cream" aria-hidden="true"><rect class="f" style="--i:0" x="3.5" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:1" x="49.929" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:2" x="3.5" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:3" x="49.929" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:4" x="96.357" y="58.857" width="28.714" height="37.643"/><rect class="lime" x="92.857" y="-15.179" width="35.714" height="44.643"/></svg>
-          <h3>Rok je proizvod</h3>
-        </div>
-        <div class="zag-b"><p>Pet radnih dana, zapisano u ponudi, ne kao procena. To je jedina stavka koju agencija sa produkcijskim danom ne može da izjednači ni po kojoj ceni, jer kod nje kasting i snimanje traju duže od celog našeg ciklusa.</p></div>
-      </div>
-      <div class="zag up" style="--i:2">
-        <div class="zag-t">
-          <svg viewBox="0 -15.18 128.57 115.18" class="mk on-cream" aria-hidden="true"><rect class="f" style="--i:0" x="3.5" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:1" x="49.929" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:2" x="3.5" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:3" x="49.929" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:4" x="96.357" y="58.857" width="28.714" height="37.643"/><rect class="lime" x="92.857" y="-15.179" width="35.714" height="44.643"/></svg>
-          <h3>Bez smanjenja u prva tri meseca</h3>
-        </div>
-        <div class="zag-b"><p>Kreativnom testu treba 60 do 90 dana da da čist signal. Ako spustite obim u drugom mesecu, platili ste test koji nikada niste pročitali, a zaključak koji izvučete iz njega biće pogrešan u oba smera.</p></div>
-      </div>
+      <div class="chips" role="group" aria-label="Filtrirajte radove po vrsti"><button class="chip" type="button" data-type="all" aria-pressed="true">Svi radovi</button><button class="chip" type="button" data-type="static" aria-pressed="false">Statični</button><button class="chip" type="button" data-type="ugc" aria-pressed="false">AI UGC</button></div>
+    </div>
+    <div class="masonry" id="masonry"><figure class="w wide win" data-type="static"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/voltr-creatine.jpg" alt="Kreatin monohidrat VOLTR na kamenu u dimu, oznaka Winner" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>VOLTR Nutrition</b> · Statični</figcaption></figure><figure class="w wide" data-type="static"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/naocare-stil.jpg" alt="Žena sa sunčanim naočarima na ulici: Stil koji traje" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Sunčane naočare</b> · Statični</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Hook 01</span><span class="fmt">9:16</span></div><img src="work/01-pattern-interrupt-9x16.jpg" alt="VELA — Ovo nije akne. Ovo je oštećena barijera." width="540" height="960" loading="lazy" decoding="async"><figcaption><b>Pattern interrupt</b> · VELA · Nesvesni</figcaption></figure><figure class="w wide" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">16:9</span></div><img src="photo/ranac-grad.jpg" alt="Muškarac sa crnim rancem ispred grada: Idealno za grad i putovanja" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Ranac</b> · Statični</figcaption></figure><figure class="w wide" data-type="ugc"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/lume-serum-ugc.jpg" alt="Ruka drži LUMÉ serum: Vidljivi rezultati za 3 nedelje" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>LUMÉ serum</b> · AI UGC video</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Hook 02</span><span class="fmt">4:5</span></div><img src="work/02-stat-shock-4x5.jpg" alt="DNEVNA — 68% unosi manje magnezijuma nego što telo troši" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Stat shock</b> · DNEVNA · Nesvesni</figcaption></figure><figure class="w wide" data-type="ugc"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/med-malina-ugc.jpg" alt="Tegla meda sa malinom, Pčelinjak Petrović: Slatko iz prirode" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Med sa malinom</b> · AI UGC video</figcaption></figure><figure class="w wide" data-type="ugc"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/rakija-dunja-ugc.jpg" alt="Glinena čašica rakije od dunje: Duh tradicije" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Rakija od dunje</b> · AI UGC video</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Hook 03</span><span class="fmt">1:1</span></div><img src="work/03-pov-moment-1x1.jpg" alt="ZRNO — POV: treća kafa danas, i dalje ne valja" width="600" height="600" loading="lazy" decoding="async"><figcaption><b>POV moment</b> · ZRNO · Nesvesni</figcaption></figure><figure class="w wide" data-type="static"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/parfem-miris.jpg" alt="Bočica parfema pod snopom svetla: Miris koji se pamti" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Parfem</b> · Statični</figcaption></figure><figure class="w wide" data-type="static"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/slusalice-detalj.jpg" alt="Bežične slušalice na stolu: Čuj svaki detalj" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Slušalice</b> · Statični</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">4:5</span></div><img src="work/04-mit-protiv-cinjenice-4x5.jpg" alt="DNEVNA — Mit: magnezijum se pije uveče jer uspavljuje" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Mit protiv činjenice</b> · DNEVNA · Nesvesni</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span></div><img src="photo/activewear-bolja-verzija.jpg" alt="Sportistkinja u teretani: Bolja verzija. Tebe." width="800" height="1000" loading="lazy" decoding="async"><figcaption><b>Activewear</b> · Statični</figcaption></figure><figure class="w wide" data-type="ugc"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/zlatna-kafa-ugc.jpg" alt="Ruka drži kesicu kafe u kafani: Autentičan turski užitak" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Zlatna kafa</b> · AI UGC video</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">4:5</span></div><img src="work/05-pas-4x5.jpg" alt="VELA — Peče posle svakog pilinga" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>PAS</b> · VELA · Svesni problema</figcaption></figure><figure class="w wide" data-type="ugc"><div class="lbl"><span class="fmt">16:9</span></div><img src="photo/sir-zlatar-ugc.jpg" alt="Ruka drži komad sira Zlatar: Ukusi tradicije" width="1280" height="720" loading="lazy" decoding="async"><figcaption><b>Sir Zlatar</b> · AI UGC video</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="fmt">4:5</span></div><img src="photo/activewear-featured.jpg" alt="Sportistkinja se isteže u tunelu: Unleash your power" width="800" height="1000" loading="lazy" decoding="async"><figcaption><b>Activewear</b> · Statični</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Test 04</span><span class="fmt">1:1</span></div><img src="work/06-vremenska-linija-1x1.jpg" alt="VELA — 28 dana, isti protokol i ništa drugo" width="600" height="600" loading="lazy" decoding="async"><figcaption><b>Vremenska linija</b> · VELA · Svesni problema</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">9:16</span></div><img src="work/07-poredenje-specifikacija-9x16.jpg" alt="OSNOVA — Polica koja se klati posle šest meseci" width="540" height="960" loading="lazy" decoding="async"><figcaption><b>Poređenje specifikacija</b> · OSNOVA · Svesni problema</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">4:5</span></div><img src="work/08-dijagram-uzroka-4x5.jpg" alt="DNEVNA — Zašto energija pada u 15h a ne u 11h" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Dijagram uzroka</b> · DNEVNA · Svesni problema</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">1:1</span></div><img src="work/09-mi-protiv-njih-1x1.jpg" alt="ATELJE 14 — Isti kaput, tri cenovna razreda" width="600" height="600" loading="lazy" decoding="async"><figcaption><b>Mi protiv njih</b> · ATELJE 14 · Svesni rešenja</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Hook 01</span><span class="fmt">4:5</span></div><img src="work/10-lista-sastojaka-4x5.jpg" alt="VELA — Četiri sastojka. Nijedan nije parfem." width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Lista sastojaka</b> · VELA · Svesni rešenja</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">9:16</span></div><img src="work/11-tri-razloga-9x16.jpg" alt="ZRNO — Tri razloga zašto kafa iz marketa nema šansu" width="540" height="960" loading="lazy" decoding="async"><figcaption><b>Tri razloga</b> · ZRNO · Svesni rešenja</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">4:5</span></div><img src="work/12-kako-radi-tri-koraka-4x5.jpg" alt="OSNOVA — Sklapanje bez alata, tri koraka" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Kako radi, tri koraka</b> · OSNOVA · Svesni rešenja</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">4:5</span></div><img src="work/13-kartica-recenzije-4x5.jpg" alt="ATELJE 14 — Nismo je mi napisali" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Kartica recenzije</b> · ATELJE 14 · Svesni proizvoda</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Test 02</span><span class="fmt">9:16</span></div><img src="work/14-dokaz-ponovljene-kupovine-9x16.jpg" alt="DNEVNA — 2.140 ponovljenih porudžbina" width="540" height="960" loading="lazy" decoding="async"><figcaption><b>Dokaz ponovljene kupovine</b> · DNEVNA · Svesni proizvoda</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">1:1</span></div><img src="work/15-ubica-prigovora-1x1.jpg" alt="OSNOVA — Da, skuplja je. Evo koliko po godini." width="600" height="600" loading="lazy" decoding="async"><figcaption><b>Ubica prigovora</b> · OSNOVA · Svesni proizvoda</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Hook 02</span><span class="fmt">4:5</span></div><img src="work/16-poruka-osnivaca-4x5.jpg" alt="ZRNO — Prošle godine sam izbacio dve šarže" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Poruka osnivača</b> · ZRNO · Svesni proizvoda</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">1:1</span></div><img src="work/17-stek-ponude-1x1.jpg" alt="VELA — Serum, čistač i protokol na 28 dana" width="600" height="600" loading="lazy" decoding="async"><figcaption><b>Stek ponude</b> · VELA · Najsvesniji</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">4:5</span></div><img src="work/18-cena-po-upotrebi-4x5.jpg" alt="DNEVNA — 0,73 evra po danu" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Cena po upotrebi</b> · DNEVNA · Najsvesniji</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">4:5</span></div><img src="work/19-hitnost-4x5.jpg" alt="ATELJE 14 — Poslednja šarža vune iz ove boje" width="600" height="750" loading="lazy" decoding="async"><figcaption><b>Hitnost</b> · ATELJE 14 · Najsvesniji</figcaption></figure><figure class="w" data-type="static"><div class="lbl"><span class="tag">Statični</span><span class="fmt">9:16</span></div><img src="work/20-ukidanje-rizika-9x16.jpg" alt="ATELJE 14 — Nosi ga 30 dana. Napolju, ne po kući." width="540" height="960" loading="lazy" decoding="async"><figcaption><b>Ukidanje rizika</b> · ATELJE 14 · Najsvesniji</figcaption></figure></div>
+    <button class="btn btn-line more" id="more" type="button" hidden>Prikaži sve radove</button>
+    <p class="sr" id="count" aria-live="polite"></p>
+    <p class="demo-note">Kreative u ovoj sekciji su rađene za demo brendove da pokažu kako sistem radi — nisu naši klijenti. Rezultati ispod su iz stvarnih kampanja.</p>
+  </div>
+  <div class="statbar">
+    <div class="wrap">
+      <div class="sb"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="10"/><rect x="17" y="3" width="10" height="10"/><rect x="31" y="3" width="10" height="10"/><rect x="3" y="17" width="10" height="10"/><rect x="17" y="17" width="10" height="10"/><rect x="31" y="17" width="10" height="10"/><rect x="3" y="31" width="10" height="10"/><rect x="17" y="31" width="10" height="10"/></g><rect x="31" y="31" width="10" height="10" fill="#151515" stroke="currentColor" stroke-width="1.8"/></svg><div><b>50+</b><span>kreativa mesečno</span></div></div>
+      <div class="sb"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1.5" y="18" width="6.5" height="12"/><rect x="10.5" y="18" width="6.5" height="12"/><rect x="19.5" y="18" width="6.5" height="12"/><rect x="28.5" y="18" width="6.5" height="12"/></g><rect x="37.5" y="11" width="6" height="12" fill="#151515" stroke="currentColor" stroke-width="1.8"/></svg><div><b>5 dana</b><span>do isporuke</span></div></div>
+      <div class="sb"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="17" width="11" height="11"/><rect x="31" y="8" width="11" height="20"/><rect x="2" y="33" width="40" height="9"/></g><rect x="16" y="13" width="12" height="15" fill="#151515" stroke="currentColor" stroke-width="1.8"/></svg><div><b>4 formata</b><span>po konceptu</span></div></div>
     </div>
   </div>
 </section>
 
-
-<section class="dark" id="radovi">
+<section class="proof" id="rezultati" aria-labelledby="h-rez">
   <div class="wrap">
-    <div class="head"><span class="n rv">02 Radovi</span><h2 class="rv">Izbor iz poslednjih ciklusa</h2></div>
-    <div class="filters up" role="group" aria-label="Filter radova">
-      <button class="fbtn" type="button" data-filter="sve" aria-pressed="true">Sve<span class="fcount"></span></button>
-      <button class="fbtn" type="button" data-filter="statik" aria-pressed="false">Statici<span class="fcount"></span></button>
-      <button class="fbtn" type="button" data-filter="video" aria-pressed="false">Video<span class="fcount"></span></button>
+    <div class="proof-head">
+      <div class="t">
+        <p class="eyebrow">Rezultati</p>
+        <h2 id="h-rez">Brojke objavljujemo kada ih imamo.</h2>
+        <p class="sub">Meta Ads Manager, poslednjih 30 dana — od 24. avgusta do 22. septembra 2026. Nazivi kampanja su sakriveni.</p>
+      </div>
+      <dl class="pstats">
+        <div><dt>prosečan ROAS kupovina</dt><dd class="hi">5,52</dd></div>
+        <div><dt>potrošeno za 30 dana</dt><dd>$5.916</dd></div>
+        <div><dt>najbolji ROAS jedne kampanje</dt><dd>11,97</dd></div>
+      </dl>
     </div>
-    <div class="collage" id="collage"></div>
-    <div class="empty" id="collageEmpty">
-      <b>Nema radova u ovom filteru</b>
-      <p>Za ovaj tip kreative trenutno nema objavljenih primera. Pošaljite upit i poslaćemo relevantne radove iz vaše kategorije direktno.</p>
-      <button class="fbtn" type="button" data-filter="sve">Prikaži sve radove</button>
+    <figure class="shot">
+      <div class="scroll"><img src="proof/meta-ads-30-dana.png" alt="Meta Ads Manager, poslednjih 30 dana: ukupno potrošeno $5,916.51, prosečan ROAS kupovina 5.52, najbolja kampanja 11.97" width="1302" height="558" loading="lazy" decoding="async"></div>
+      <figcaption>Screenshot iz Meta Ads Managera, 24. 8. – 22. 9. 2026. Prikazane su kolone od statusa do vrednosti kupovina; kolona sa nazivima kampanja je izostavljena.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="process cream" id="proces" aria-labelledby="h-proces">
+  <div class="wrap">
+    <div class="pr-head">
+      <div class="t">
+        <p class="eyebrow">Kako radimo</p>
+        <h2 id="h-proces">Od brief-a do oglasa koji radi<span class="dot">.</span></h2>
+        <p class="sub">Jednostavan sistem kreativnog testiranja koji daje više kvalitetnih oglasa, bržu isporuku i jasan sledeći korak.</p>
+      </div>
+      <a class="btn btn-lime" href="#paketi">Pogledajte pakete <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 10h15M11 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+    </div>
+    <ol class="steps">
+      <li class="step"><div class="step-top"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="10"/><rect x="17" y="3" width="10" height="10"/><rect x="31" y="3" width="10" height="10"/><rect x="3" y="17" width="10" height="10"/><rect x="17" y="17" width="10" height="10"/><rect x="31" y="17" width="10" height="10"/><rect x="3" y="31" width="10" height="10"/><rect x="17" y="31" width="10" height="10"/></g><rect x="31" y="31" width="10" height="10" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg><span class="st-n">01</span></div>
+        <h3>Brojimo koncepte, ne fajlove<span class="dot">.</span></h3>
+        <p>Umesto gomile datoteka i nedefinisanih ideja, dobijate jasne kreativne koncepte koji se testiraju u stvarnim uslovima.</p></li>
+      <li aria-hidden="true"><svg class="arrow" viewBox="0 0 38 38" aria-hidden="true" focusable="false"><path d="M3 19h31M24 9l10 10-10 10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></li>
+      <li class="step"><div class="step-top"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1.5" y="18" width="6.5" height="12"/><rect x="10.5" y="18" width="6.5" height="12"/><rect x="19.5" y="18" width="6.5" height="12"/><rect x="28.5" y="18" width="6.5" height="12"/></g><rect x="37.5" y="11" width="6" height="12" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg><span class="st-n">02</span></div>
+        <h3>Rok je proizvod<span class="dot">.</span></h3>
+        <p>Kreativnim testovima ne trošimo vreme na pogrešne pravce. Brže dolazimo do pobedničkih ideja i isporučujemo ih u roku.</p></li>
+      <li aria-hidden="true"><svg class="arrow" viewBox="0 0 38 38" aria-hidden="true" focusable="false"><path d="M3 19h31M24 9l10 10-10 10" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></li>
+      <li class="step"><div class="step-top"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="24" y="4" width="16" height="16"/><rect x="4" y="24" width="16" height="16"/><rect x="24" y="24" width="16" height="16"/></g><rect x="4" y="4" width="16" height="16" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg><span class="st-n">03</span></div>
+        <h3>Bez smanjenja u prva tri meseca<span class="dot">.</span></h3>
+        <p>Kreativni momentum, testovi i optimizacija ne staju. Fokusirani smo na rast i skaliranje učinka, bez skraćivanja budžeta i obima.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-label="Zakažite poziv">
+  <div class="wrap">
+    <svg class="up" viewBox="0 0 42 42" aria-hidden="true" focusable="false"><path d="M6 36L36 6M12 6h24v24" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><span class="vr" aria-hidden="true"></span>
+    <p class="band-line">Sledeći test počinje jednim pozivom.</p>
+    <div class="band-side">
+      <a class="btn btn-lime" href="mailto:hello@balkancreative.studio?subject=Srbija%20%E2%80%94%20Uvodni%20poziv">Zakažite uvodni poziv <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M2 10h15M11 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      <p class="mail">ili pišite na <code>hello@balkancreative.studio</code><button class="copy" type="button" data-copy="hello@balkancreative.studio">Kopiraj</button></p>
     </div>
   </div>
 </section>
 
-<section class="limes" id="rezultati">
+<section class="pk" id="paketi" aria-labelledby="h-pk">
   <div class="wrap">
-    <div class="head"><span class="n rv">03 Rezultati</span><h2 class="rv">Šta se promenilo u nalogu</h2></div>
-    <div class="cases">
-      <article class="case up" style="--i:0">
-        <div><div class="c-big" data-count="34" data-prefix="−" data-suffix="%">0%</div><s class="c-cap">niža cena po kupovini, treći mesec</s></div>
-        <div>
-          <h3>Nega kože, Beograd</h3>
-          <p>Nalog je vrteo četiri kreative od lansiranja. U prvom ciklusu smo pustili 41 ugao kroz statike, pa u drugom skalirali tri koja su preživela. Cena po kupovini je pala kada je publika prestala da gleda isti oglas peti put.</p>
-        </div>
-        <div class="c-side">
-          <div><b>3,1x</b><s>ROAS, mesec tri</s></div>
-          <div><b>41</b><s>testiranih uglova</s></div>
-        </div>
+    <div class="pk-head">
+      <p class="eyebrow">Paketi</p>
+      <h2 id="h-pk">Izaberite ritam.</h2>
+      <p class="sub">Mesečne cene u evrima. Minimalni period je tri meseca — kreativni test daje jasan signal tek posle 60 do 90 dana.</p>
+    </div>
+    <div class="pk-grid">
+      <article class="card">
+        <h3>Start</h3><p class="for">Za prvi ciklus testiranja</p>
+        <p class="price"><b>199 €</b><span>/ mesečno</span></p>
+        <p class="turn"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1.5" y="18" width="6.5" height="12"/><rect x="10.5" y="18" width="6.5" height="12"/><rect x="19.5" y="18" width="6.5" height="12"/><rect x="28.5" y="18" width="6.5" height="12"/></g><rect x="37.5" y="11" width="6" height="12" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg>7 radnih dana</p>
+        <ul><li>20 statičnih oglasa</li><li>1 AI UGC video koncept</li><li>2 hook varijante</li><li>Formati 1:1, 4:5 i 9:16</li></ul>
+        <a class="btn btn-line" href="mailto:hello@balkancreative.studio?subject=Srbija%20%E2%80%94%20Start">Izaberite Start</a>
       </article>
-
-      <article class="case up" style="--i:1">
-        <div><div class="c-big" data-count="127" data-prefix="+" data-suffix="%">0%</div><s class="c-cap">viši CTR na hladnoj publici</s></div>
-        <div>
-          <h3>Suplementi, Novi Sad</h3>
-          <p>Kategorija u kojoj svi koriste isti vizuelni jezik. Devet UGC koncepata sa različitim otvaranjem, od kojih su dva probila zid na hladnoj publici. Ostalih sedam je bilo potrebno da bi se ta dva našla.</p>
-        </div>
-        <div class="c-side">
-          <div><b>9</b><s>UGC koncepata</s></div>
-          <div><b>4 nedelje</b><s>do prvog winnera</s></div>
-        </div>
+      <article class="card best">
+        <span class="tag"><svg viewBox="0 0 129 115" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="12"><rect x="6" y="21" width="30" height="38"/><rect x="52" y="21" width="30" height="38"/><rect x="6" y="75" width="30" height="38"/><rect x="52" y="75" width="30" height="38"/><rect x="98" y="75" width="30" height="38"/></g><rect x="93" y="0" width="36" height="45" fill="currentColor"/></svg>Preporučujemo</span>
+        <h3>Skala</h3><p class="for">Mesečni sistem testiranja</p>
+        <p class="price"><b>439 €</b><span>/ mesečno</span></p>
+        <p class="unit">8,78 € po kreativi</p>
+        <p class="turn"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1.5" y="18" width="6.5" height="12"/><rect x="10.5" y="18" width="6.5" height="12"/><rect x="19.5" y="18" width="6.5" height="12"/><rect x="28.5" y="18" width="6.5" height="12"/></g><rect x="37.5" y="11" width="6" height="12" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg>5 radnih dana</p>
+        <ul><li>12 statičnih koncepata → 50 fajlova</li><li>3 AI UGC video koncepta × 3 hooka</li><li>4 formata po konceptu: 1:1, 4:5, 9:16 i 16:9</li><li>2 kruga revizija</li><li>Mesečni izveštaj: šta je radilo i šta testiramo dalje</li></ul>
+        <a class="btn btn-lime" href="mailto:hello@balkancreative.studio?subject=Srbija%20%E2%80%94%20Skala">Izaberite Skala</a>
       </article>
-
-      <article class="case up" style="--i:2">
-        <div><div class="c-big">2,4x</div><s class="c-cap">više pobedničkih kreativa po ciklusu</s></div>
-        <div>
-          <h3>Modni brend, Zagreb</h3>
-          <p>Prešli su sa kvartalne produkcije na mesečnu rotaciju. Isti budžet za oglase, isti tim na nalogu, jedina promena je broj kreativa koje su mogli da testiraju u istom prozoru.</p>
-        </div>
-        <div class="c-side">
-          <div><b>−46%</b><s>cena po kliku</s></div>
-          <div><b>6</b><s>meseci saradnje</s></div>
-        </div>
+      <article class="card">
+        <h3>Custom</h3><p class="for">Za brendove koji su prerasli fiksni slot</p>
+        <p class="price"><b><small>od</small>879 €</b><span>/ mesečno</span></p>
+        <p class="turn"><svg class="ico" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1.5" y="18" width="6.5" height="12"/><rect x="10.5" y="18" width="6.5" height="12"/><rect x="19.5" y="18" width="6.5" height="12"/><rect x="28.5" y="18" width="6.5" height="12"/></g><rect x="37.5" y="11" width="6" height="12" fill="#D8F26B" stroke="currentColor" stroke-width="1.8"/></svg>72 sata</p>
+        <ul><li>50+ fajlova mesečno</li><li>5+ koncepata</li><li>5 hook varijanti po videu</li><li>Prioritetni red u produkciji</li></ul>
+        <a class="btn btn-line" href="mailto:hello@balkancreative.studio?subject=Srbija%20%E2%80%94%20Custom">Zakažite poziv</a>
       </article>
     </div>
-    <p class="res-note">Brojevi su iz Meta Ads izveštaja klijenata, mereni na nivou naloga u navedenom periodu. Nazivi brendova se objavljuju samo uz njihovu pisanu saglasnost.</p>
-  </div>
-</section>
-
-<section class="dark" id="proces">
-  <div class="wrap">
-    <div class="head"><span class="n rv">04 Proces</span><h2 class="rv">Od poziva do rotacije</h2></div>
-    <div class="proc">
-      <div class="spine" aria-hidden="true">
-        <svg viewBox="0 0 6 200" preserveAspectRatio="none">
-          <line class="track" x1="3" y1="0" x2="3" y2="200"/>
-          <line class="fillline" id="spinefill" x1="3" y1="0" x2="3" y2="200" pathLength="1"/>
-        </svg>
-      </div>
-      <div>
-        <div class="pstep up" style="--i:0">
-          <div><div class="k"><em>01</em><h3>Poziv i pristup nalogu</h3></div><p>Petnaest minuta poziva, pa nam date pristup Meta Ads nalogu i osnovne materijale o proizvodu. Pre nego što bilo šta krenemo, znamo šta ste već testirali i šta je od toga palo.</p></div>
-          <div class="when">1 radni dan</div>
-        </div>
-        <div class="pstep up" style="--i:1">
-          <div><div class="k"><em>02</em><h3>Uglovi i koncepti</h3></div><p>Uglove biramo na osnovu onoga što je već radilo kod vas i kod konkurencije u kategoriji. Vi odobravate koncepte pre nego što išta uđe u produkciju.</p></div>
-          <div class="when">2 radna dana</div>
-        </div>
-        <div class="pstep up" style="--i:2">
-          <div><div class="k"><em>03</em><h3>Produkcija i isporuka</h3></div><p>Sve varijante u svim formatima, spremne za upload. Bez vodenih žigova, bez naknadnih troškova, sa uključenim pravima korišćenja u plaćenim kampanjama.</p></div>
-          <div class="when">5 radnih dana od odobrenja</div>
-        </div>
-        <div class="pstep up" style="--i:3">
-          <div><div class="k"><em>04</em><h3>Izveštaj i rotacija</h3></div><p>Jedna strana na kraju meseca: šta je radilo, šta nije i šta pravimo sledeći ciklus. Bez ovog koraka svaki mesec počinjete od nule.</p></div>
-          <div class="when">Uz Skalu i Studio</div>
-        </div>
-      </div>
+    <p class="pk-all">Svi paketi: prava korišćenja bez vremenskog roka · 50% avansa pre prvog ciklusa · fiksni produkcijski slot.</p>
+    <div class="audit">
+      <p><b>Počnite auditom — 160 €, 3 radna dana.</b> Tri konkretne slabosti vaših trenutnih oglasa i tri mockup statika kao dokaz šta bismo uradili drugačije.</p>
+      <a class="btn btn-line" href="mailto:hello@balkancreative.studio?subject=Srbija%20%E2%80%94%20Kreativni%20audit">Naručite audit</a>
     </div>
   </div>
 </section>
 
-<section id="paketi">
+<section class="faq" id="pitanja" aria-labelledby="h-faq">
   <div class="wrap">
-    <div class="head"><span class="n rv">05 Paketi</span><h2 class="rv">Tri nivoa, mesečno</h2></div>
-    <div class="plans">
-      <div class="plan up" style="--i:0">
-        <div class="tag">Ulaz</div>
-        <h3>Test</h3>
-        <div class="price" data-count="249" data-suffix=" €">0 €</div>
-        <div class="who">Za brendove koji tek uvode redovno testiranje kreative.</div>
-        <ul class="spec">
-          <li>Statični koncepti <b>5 / do 20 fajlova</b></li>
-          <li>AI UGC koncepti <b>1</b></li>
-          <li>Hook varijante <b>2 po videu</b></li>
-          <li>Formati <b>1:1, 4:5, 9:16</b></li>
-          <li>Rok isporuke <b>7 radnih dana</b></li>
-          <li>Revizije <b>1 krug</b></li>
-          <li>Komunikacija <b>Email / WhatsApp</b></li>
-          <li>Mesečni izveštaj <b>Ne</b></li>
-        </ul>
-        <a href="#kontakt" class="btn magnet"><span>Zakažite poziv</span></a>
-      </div>
-
-      <div class="plan hero-plan up" style="--i:1">
-        <div class="tag"><i></i>Bira 7 od 10 brendova</div>
-        <h3>Skala</h3>
-        <div class="price" data-count="549" data-suffix=" €">0 €</div>
-        <div class="who">Za brendove koji već troše na Meta Ads svakog meseca.</div>
-        <ul class="spec">
-          <li>Statični koncepti <b>12 / do 50 fajlova</b></li>
-          <li>AI UGC koncepti <b>3</b></li>
-          <li>Hook varijante <b>3 po videu</b></li>
-          <li>Formati <b>Svi + 16:9</b></li>
-          <li>Rok isporuke <b>5 radnih dana</b></li>
-          <li>Revizije <b>2 kruga</b></li>
-          <li>Komunikacija <b>WhatsApp + mesečni poziv</b></li>
-          <li>Mesečni izveštaj <b>Da</b></li>
-        </ul>
-        <a href="#kontakt" class="btn magnet"><span>Zakažite poziv</span></a>
-      </div>
-
-      <div class="plan up" style="--i:2">
-        <div class="tag">Po meri</div>
-        <h3>Studio</h3>
-        <div class="price">od 1.099 <small>€</small></div>
-        <div class="who">Za brendove sa više linija proizvoda ili više tržišta.</div>
-        <ul class="spec">
-          <li>Statični koncepti <b>Po dogovoru</b></li>
-          <li>AI UGC koncepti <b>Po dogovoru</b></li>
-          <li>Hook varijante <b>5 po videu</b></li>
-          <li>Formati <b>Svi</b></li>
-          <li>Rok isporuke <b>72 sata</b></li>
-          <li>Revizije <b>Prioritet</b></li>
-          <li>Komunikacija <b>Slack + nedeljni poziv</b></li>
-          <li>Mesečni izveštaj <b>Da</b></li>
-        </ul>
-        <a href="#kontakt" class="btn magnet"><span>Tražite ponudu</span></a>
-      </div>
-    </div>
-
-    <div class="fine">
-      <div class="up" style="--i:0"><i></i><span>Dodaci na Studio: +1 statični koncept 119 €, +1 UGC koncept 159 €, hitna isporuka za 48 sati +35% na ukupno, dodatna jezička verzija 129 €, nova AI persona za brend 249 € jednokratno.</span></div>
-      <div class="up" style="--i:1"><i></i><span>Minimalni period: 3 meseca za Test i Skalu, 6 meseci za Studio. Uz plaćanje tri meseca unapred, popust od 10 odsto.</span></div>
+    <div class="t"><p class="eyebrow">Pitanja</p><h2 id="h-faq">Pre nego što zakažete.</h2></div>
+    <div class="acc">
+      <details open><summary>Koliko brzo isporučujete?</summary><p>Start za 7 radnih dana, Skala za 5, Custom za 72 sata. Rok piše u ponudi i u ugovoru — to je proizvod koji plaćate.</p></details>
+      <details><summary>Da li garantujete pobednički oglas?</summary><p>Ne. Garantujemo broj testova i rok. Pobednika bira vaša publika — zato testiramo pedeset uglova, a ne jedan.</p></details>
+      <details><summary>Da li je sve urađeno veštačkom inteligencijom?</summary><p>Da, AI je deo produkcije — bez kastinga, snimanja i čekanja na lokaciju. Zato je brzo, ne zato je jeftino.</p></details>
+      <details><summary>Ko je vlasnik kreativa?</summary><p>Vi. Prava korišćenja za plaćene oglase uključena su u cenu, bez vremenskog roka.</p></details>
+      <details><summary>Kako se plaća?</summary><p>Mesečno, fakturom u evrima. Novi klijenti plaćaju 50% avansa pre prvog ciklusa.</p></details>
+      <details><summary>Zašto minimum tri meseca?</summary><p>Kreativni test daje signal za 60 do 90 dana. Ako stanemo ranije, platili ste produkciju bez odgovora.</p></details>
     </div>
   </div>
 </section>
+</main>
 
-<section>
+<footer class="ftr">
   <div class="wrap">
-    <div class="head"><span class="n rv">06 Uslovi</span><h2 class="rv">Naplata bez iznenađenja</h2></div>
-    <div class="terms">
-      <div class="tm up" style="--i:0"><b>50 odsto avans</b><span>Kod svakog novog klijenta, bez izuzetka. Ostatak po isporuci ciklusa.</span></div>
-      <div class="tm up" style="--i:1"><b>Faktura u evrima</b><span>Plaćanje preko deviznog računa, konverzija iz dinara na strani klijenta.</span></div>
-      <div class="tm up" style="--i:2"><b>Prava korišćenja</b><span>Uključena u cenu, za plaćene kampanje i organski sadržaj, bez vremenskog roka.</span></div>
-      <div class="tm up" style="--i:3"><b>Fajlovi ostaju vaši</b><span>Svi izvorni fajlovi i posle prekida saradnje. Ništa se ne zaključava.</span></div>
+    <div class="ftr-top">
+      <div><a class="brand" href="#top" aria-label="Balkan / Ad Studio — na vrh"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0.00 -15.18 1238.21 115.18" role="img" aria-label="BALKAN / AD STUDIO"><g><g class="mk-f" fill="none" stroke="#F4F0E8" stroke-width="7.00"><rect class="f1" x="3.500" y="3.500" width="28.714" height="37.643"/><rect class="f2" x="49.929" y="3.500" width="28.714" height="37.643"/><rect class="f3" x="3.500" y="58.857" width="28.714" height="37.643"/><rect class="f4" x="49.929" y="58.857" width="28.714" height="37.643"/><rect class="f5" x="96.357" y="58.857" width="28.714" height="37.643"/></g><g class="mk-w" fill="#D8F26B"><rect x="92.857" y="-15.179" width="35.714" height="44.643"/></g></g><g transform="translate(170.57,0)"><path d="M78.80 51.25 81.28 45.57Q92.72 45.92 100.31 49.17Q107.89 52.43 111.64 58.13Q115.39 63.84 115.39 71.60Q115.39 79.71 111.69 86.16Q108.00 92.61 100.56 96.31Q93.12 100.00 81.97 100.00H5.81L13.47 48.67L5.81 0.00H79.25Q93.12 0.00 100.92 6.47Q108.72 12.93 108.72 24.37Q108.72 30.80 105.80 36.52Q102.88 42.24 96.33 46.17Q89.79 50.11 78.80 51.25ZM36.24 93.04 24.43 78.93H72.83Q78.00 78.93 80.95 76.31Q83.89 73.68 83.89 69.07Q83.89 64.69 80.84 61.84Q77.79 58.99 71.84 58.99H31.60V38.35H67.44Q71.63 38.35 74.43 35.85Q77.23 33.36 77.23 29.23Q77.23 25.68 74.75 23.37Q72.27 21.07 67.71 21.07H24.53L36.24 6.96L43.09 48.67Z M147.13 81.97V57.20H215.61V81.97ZM202.49 0.00 247.18 100.00H214.09L177.74 13.49H186.14L149.79 100.00H116.70L161.39 0.00Z M284.28 0.00V86.27L270.33 72.37H344.92V100.00H253.24V0.00Z M353.67 100.00V0.00H384.50V75.60L376.50 69.07L429.67 0.00H462.29L381.78 100.00ZM401.59 53.15 424.34 34.83 463.65 100.00H428.47Z M490.43 81.97V57.20H558.91V81.97ZM545.79 0.00 590.48 100.00H557.39L521.04 13.49H529.44L493.09 100.00H460.00L504.69 0.00Z M689.21 77.81 680.30 79.79V0.00H710.38V100.00H671.45L617.74 20.32L626.62 18.35V100.00H596.54V0.00H636.65Z" fill="#F4F0E8"/><g transform="translate(738.97,70.00)"><path d="M3.57 35.93 18.05 -2.66H22.22L7.74 35.93Z" fill="#D8F26B"/><path d="M19.86 30.00 17.58 22.01H8.04L5.76 30.00H0.86L9.63 0.00H16.20L24.97 30.00ZM12.98 4.86H12.64L8.94 18.01H16.68Z M33.81 0.00H42.75Q48.51 0.00 51.28 3.83Q54.06 7.65 54.06 15.00Q54.06 22.35 51.28 26.17Q48.51 30.00 42.75 30.00H33.81ZM42.45 26.05Q45.76 26.05 47.37 23.83Q48.98 21.62 48.98 17.49V12.51Q48.98 8.38 47.37 6.17Q45.76 3.95 42.45 3.95H38.58V26.05Z M103.50 30.52Q99.59 30.52 96.92 29.14Q94.26 27.77 92.54 25.49L95.63 22.52Q97.35 24.58 99.29 25.55Q101.22 26.52 103.67 26.52Q106.51 26.52 108.03 25.23Q109.56 23.94 109.56 21.53Q109.56 19.60 108.44 18.55Q107.33 17.49 104.62 17.02L101.35 16.50Q99.20 16.16 97.74 15.37Q96.28 14.57 95.38 13.47Q94.47 12.38 94.07 11.02Q93.66 9.67 93.66 8.17Q93.66 3.91 96.41 1.70Q99.16 -0.52 103.97 -0.52Q107.54 -0.52 110.05 0.62Q112.57 1.76 114.12 3.83L111.11 6.83Q109.86 5.33 108.16 4.41Q106.47 3.48 103.97 3.48Q101.31 3.48 99.91 4.62Q98.51 5.76 98.51 7.95Q98.51 9.80 99.61 10.85Q100.71 11.91 103.50 12.38L106.68 12.94Q110.72 13.67 112.57 15.88Q114.42 18.09 114.42 21.28Q114.42 23.34 113.71 25.06Q113.00 26.78 111.60 27.98Q110.20 29.18 108.16 29.85Q106.12 30.52 103.50 30.52Z M136.45 4.04V30.00H131.64V4.04H122.23V0.00H145.87V4.04Z M159.22 0.00V18.44Q159.22 20.29 159.33 21.79Q159.43 23.30 159.95 24.35Q160.47 25.40 161.50 25.96Q162.53 26.52 164.33 26.52Q166.14 26.52 167.17 25.96Q168.20 25.40 168.72 24.35Q169.23 23.30 169.34 21.79Q169.45 20.29 169.45 18.44V0.00H174.26V17.58Q174.26 20.80 173.90 23.23Q173.53 25.66 172.46 27.27Q171.38 28.88 169.43 29.70Q167.47 30.52 164.33 30.52Q161.20 30.52 159.24 29.70Q157.29 28.88 156.21 27.27Q155.14 25.66 154.77 23.23Q154.41 20.80 154.41 17.58V0.00Z M185.25 0.00H194.19Q199.95 0.00 202.72 3.83Q205.50 7.65 205.50 15.00Q205.50 22.35 202.72 26.17Q199.95 30.00 194.19 30.00H185.25ZM193.89 26.05Q197.20 26.05 198.81 23.83Q200.42 21.62 200.42 17.49V12.51Q200.42 8.38 198.81 6.17Q197.20 3.95 193.89 3.95H190.02V26.05Z M215.45 30.00V26.35H222.50V3.65H215.45V0.00H234.37V3.65H227.32V26.35H234.37V30.00Z M255.20 30.52Q252.36 30.52 250.28 29.46Q248.19 28.41 246.84 26.43Q245.48 24.46 244.84 21.58Q244.19 18.70 244.19 15.00Q244.19 11.35 244.84 8.45Q245.48 5.54 246.84 3.57Q248.19 1.59 250.28 0.54Q252.36 -0.52 255.20 -0.52Q258.03 -0.52 260.12 0.54Q262.20 1.59 263.56 3.57Q264.91 5.54 265.56 8.45Q266.20 11.35 266.20 15.00Q266.20 18.70 265.56 21.58Q264.91 24.46 263.56 26.43Q262.20 28.41 260.12 29.46Q258.03 30.52 255.20 30.52ZM255.20 26.52Q258.42 26.52 259.75 24.09Q261.09 21.66 261.09 17.49V12.46Q261.09 8.34 259.75 5.91Q258.42 3.48 255.20 3.48Q251.97 3.48 250.64 5.91Q249.31 8.34 249.31 12.46V17.54Q249.31 21.66 250.64 24.09Q251.97 26.52 255.20 26.52Z" fill="#F4F0E8" transform="translate(60.58,0)"/></g></g>
+</svg></a><p class="claim">Više testova. Brže.</p></div>
+      <nav aria-label="Podnožje"><a href="#radovi">Radovi</a><a href="#rezultati">Rezultati</a><a href="#proces">Proces</a><a href="#paketi">Paketi</a><a href="#pitanja">Pitanja</a></nav>
+      <p class="mail"><code>hello@balkancreative.studio</code><button class="copy" type="button" data-copy="hello@balkancreative.studio">Kopiraj</button></p>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="head"><span class="n rv">07 Pitanja</span><h2 class="rv">Ono što nas najčešće pitaju</h2></div>
-    <div class="faq up">
-      <details class="q"><summary>Da li je ovo AI generisano?</summary><div class="ans"><p>Jeste, i to je razlog zašto je brzo, ne razlog zašto je jeftino. Ista kreativa kroz klasičnu produkciju traži kasting, snimanje i montažu, što znači tri do četiri nedelje i budžet u kojem nema mesta za trideset varijanti. Kod nas je ciklus pet dana, a broj varijanti ne zavisi od toga koliko je ljudi bilo na setu.</p></div></details>
-      <details class="q"><summary>Šta ako mi se isporučeno ne svidi?</summary><div class="ans"><p>Koncepte odobravate pre produkcije, tako da se nesporazum rešava dok je još u tekstu. Posle isporuke imate ugovoreni broj krugova revizije po paketu. Ako posle prvog kruga i dalje ne valja, to je naš propust u brifu i ispravljamo ga bez dodatne naplate.</p></div></details>
-      <details class="q"><summary>Da li vodite i same kampanje?</summary><div class="ans"><p>Ne. Mi radimo kreativu, vi ili vaša agencija vodite nalog. Ovo namerno držimo odvojeno, jer studio koji pravi kreativu i istovremeno meri sopstveni rezultat nije objektivan izvor.</p></div></details>
-      <details class="q"><summary>Radite li i van Srbije?</summary><div class="ans"><p>Da. Aktivni smo u Severnoj Makedoniji, Bosni i Hercegovini, Crnoj Gori, Hrvatskoj i Sloveniji. Cenovnik se razlikuje po tržištu. Dodatna jezička verzija istog koncepta naplaćuje se kao dodatak, ne kao novi paket.</p></div></details>
-      <details class="q"><summary>Koliko brendova primate istovremeno?</summary><div class="ans"><p>Najviše osam aktivnih naloga. To nije marketinški potez nego kapacitet. Iznad tog broja pada ili rok isporuke ili kvalitet koncepata, a rok je jedina stvar koju prodajemo.</p></div></details>
-      <details class="q"><summary>Radite li sa brendovima iz iste kategorije?</summary><div class="ans"><p>Ne u istom periodu i ne na istom tržištu. Ako već radimo sa jednim brendom u vašoj kategoriji u Srbiji, reći ćemo vam to na prvom pozivu, pre nego što potrošite vreme na brif.</p></div></details>
-    </div>
-  </div>
-</section>
-
-<section class="dark" id="kontakt">
-  <div class="wrap">
-    <div class="head"><span class="n rv">08 Kontakt</span><h2 class="rv">Sledeći ciklus kreće u ponedeljak</h2></div>
-    <div class="form-grid">
-      <div class="up" style="--i:0">
-        <p style="color:var(--mid-dark)">Petnaest minuta poziva je dovoljno da vidimo da li ima smisla. Ako nema, reći ćemo vam na pozivu, a ne posle tri meseca.</p>
-        <div style="margin-top:26px;display:grid;gap:8px;font-size:.92rem">
-          <a href="mailto:zdravo@balkanadstudio.rs" style="text-decoration:none;color:var(--lime)">zdravo@balkanadstudio.rs</a>
-          <a href="tel:+381634182270" style="text-decoration:none;opacity:.85">+381 63 418 2270</a>
-          <span style="color:var(--mid-dark);font-size:.84rem">Odgovaramo istog radnog dana do 18h.</span>
-        </div>
-      </div>
-
-      <form id="lead" novalidate class="up" style="--i:1">
-        <div class="f-body">
-          <div class="f-row">
-            <div class="field" data-f="ime">
-              <label for="ime">Ime i prezime <s>*</s></label>
-              <input id="ime" name="ime" type="text" autocomplete="name" required>
-              <span class="err">Unesite ime i prezime.</span>
-            </div>
-            <div class="field" data-f="brend">
-              <label for="brend">Brend ili sajt <s>*</s></label>
-              <input id="brend" name="brend" type="text" placeholder="npr. vasbrend.rs" required>
-              <span class="err">Unesite naziv brenda ili adresu sajta.</span>
-            </div>
-          </div>
-          <div class="f-row">
-            <div class="field" data-f="email">
-              <label for="email">Email <s>*</s></label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-              <span class="err">Proverite format email adrese.</span>
-            </div>
-            <div class="field" data-f="budzet">
-              <label for="budzet">Mesečni budžet za oglase</label>
-              <select id="budzet" name="budzet">
-                <option value="">Izaberite raspon</option>
-                <option>Do 2.000 €</option>
-                <option>2.000 do 8.000 €</option>
-                <option>8.000 do 25.000 €</option>
-                <option>Preko 25.000 €</option>
-                <option>Još ne oglašavamo</option>
-              </select>
-              <span class="hint">Koristimo samo da procenimo koji paket ima smisla.</span>
-            </div>
-          </div>
-          <div class="field" data-f="poruka">
-            <label for="poruka">Šta trenutno ne radi</label>
-            <textarea id="poruka" name="poruka" placeholder="Kratko: šta ste testirali, gde vam se gasi performans, koji je cilj za sledeći kvartal."></textarea>
-            <span class="hint">Dva do tri reda su dovoljna za prvi poziv.</span>
-          </div>
-          <button type="submit" class="btn fill magnet" style="width:100%"><span>Pošaljite upit</span></button>
-          <p class="f-note">Ne prosleđujemo podatke trećim licima i ne šaljemo newsletter.</p>
-        </div>
-
-        <div class="skel" aria-hidden="true"><span></span><span></span><span></span></div>
-
-        <div class="done" role="status">
-          <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" fill="none" stroke="#D8F26B" stroke-width="2"/><path d="M7 13.4l4 4 8-9" fill="none" stroke="#D8F26B" stroke-width="2.4"/></svg>
-          <div><b>Upit je zabeležen</b><p>Javljamo se sa terminom u roku od jednog radnog dana. Ako vam treba brže, pozovite direktno na broj sa leve strane.</p></div>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="f-top">
-      <div>
-        <svg viewBox="0 -15.18 128.57 115.18" class="mk on-ink go" aria-hidden="true"><rect class="f" style="--i:0" x="3.5" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:1" x="49.929" y="3.5" width="28.714" height="37.643"/><rect class="f" style="--i:2" x="3.5" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:3" x="49.929" y="58.857" width="28.714" height="37.643"/><rect class="f" style="--i:4" x="96.357" y="58.857" width="28.714" height="37.643"/><rect class="lime" x="92.857" y="-15.179" width="35.714" height="44.643"/></svg>
-        <div style="font-variation-settings:'wdth' 118,'wght' 800;font-size:1.05rem;letter-spacing:-.045em">BALKAN <span style="color:var(--lime)">/</span> <span style="font-size:.66rem;font-variation-settings:'wdth' 92,'wght' 600;color:var(--mid-dark)">AD STUDIO</span></div>
-        <p style="color:var(--mid-dark);font-size:.85rem;margin-top:12px;max-width:34ch">Performance kreativa za e-commerce brendove na Balkanu.</p>
-      </div>
-      <div class="f-col">
-        <b>Sadržaj</b>
-        <a href="#radovi">Radovi</a><a href="#rezultati">Rezultati</a><a href="#proces">Proces</a><a href="#paketi">Paketi</a>
-      </div>
-      <div class="f-col">
-        <b>Kontakt</b>
-        <a href="mailto:zdravo@balkanadstudio.rs">zdravo@balkanadstudio.rs</a>
-        <a href="tel:+381634182270">+381 63 418 2270</a>
-        <a href="/mk">Македонска верзија</a>
-        <a href="/">English</a>
-      </div>
-    </div>
-    <div class="f-bot"><span>Beograd, Srbija</span><span>© 2026 BALKAN / AD STUDIO</span></div>
+    <div class="ftr-bot"><span>© 2026 Balkan / Ad Studio</span><span>RS · MK · HR · BA · ME · SI · AL</span></div>
   </div>
 </footer>
 
 <script>
 (function(){
-  'use strict';
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var fine = matchMedia('(pointer: fine)').matches;
+  // mobile menu
+  var hdr=document.querySelector('.hdr'), btn=document.getElementById('menu');
+  btn.addEventListener('click',function(){var o=hdr.classList.toggle('open');btn.setAttribute('aria-expanded',o);});
+  document.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
 
-  /* hero load sequence, mark draw included */
-  requestAnimationFrame(function(){
-    setTimeout(function(){
-      document.querySelector('.hero').classList.add('lit');
-      var bm = document.getElementById('bigmark');
-      if(bm) bm.classList.add('go');
-    }, 80);
-  });
-
-  /* progress fallback where scroll-timeline is unsupported */
-  if(!CSS.supports('animation-timeline','scroll()')){
-    var bar = document.getElementById('prog'), pending = false;
-    addEventListener('scroll', function(){
-      if(pending) return; pending = true;
-      requestAnimationFrame(function(){
-        var h = document.documentElement.scrollHeight - innerHeight;
-        bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')';
-        pending = false;
-      });
-    }, {passive:true});
+  // work grid: dense grid; each tile spans rows by its own height, wide creatives span two columns
+  var grid=document.getElementById('masonry'), items=[].slice.call(grid.querySelectorAll('.w')),
+      count=document.getElementById('count'), more=document.getElementById('more'),
+      LIMIT=16, expanded=false, filter='all';
+  function spans(){
+    grid.classList.add('js');
+    items.forEach(function(it){ if(it.hidden)return; it.style.gridRowEnd='auto';
+      it.style.gridRowEnd='span '+Math.ceil((it.getBoundingClientRect().height+18)/4); });
   }
-
-  /* counters */
-  function count(el){
-    if(el.dataset.done) return; el.dataset.done = '1';
-    var end = parseFloat(el.dataset.count),
-        pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
-    if(reduce){ el.textContent = pre + end.toLocaleString('sr-RS') + suf; return; }
-    var t0 = 0, dur = 1150;
-    (function tick(t){
-      if(!t0) t0 = t;
-      var p = Math.min((t - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
-      el.textContent = pre + Math.round(end * e).toLocaleString('sr-RS') + suf;
-      if(p < 1) requestAnimationFrame(tick);
-    })(performance.now());
-  }
-
-  /* reveals + marks, IntersectionObserver only */
-  var io = new IntersectionObserver(function(list){
-    list.forEach(function(en){
-      if(!en.isIntersecting) return;
-      var el = en.target;
-      if(el.dataset.count) count(el);
-      else if(el.classList.contains('mk')) el.classList.add('go');
-      else el.classList.add('on');
-      io.unobserve(el);
+  function apply(){
+    var total=0, shown=0;
+    items.forEach(function(it){
+      var ok=filter==='all'||it.dataset.type===filter; if(ok)total++;
+      it.hidden=!(ok&&(expanded||total<=LIMIT)); if(!it.hidden)shown++;
     });
-  }, {threshold:.2, rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.rv,.up,[data-count],section .mk').forEach(function(el){ io.observe(el); });
-
-  /* process spine draws with scroll position of its own section */
-  var spine = document.getElementById('spinefill'),
-      proc  = document.getElementById('proces');
-  if(spine && proc){
-    var spineIO = new IntersectionObserver(function(l){
-      l.forEach(function(e){ e.isIntersecting ? addEventListener('scroll', drawSpine, {passive:true}) : removeEventListener('scroll', drawSpine); });
-    }, {threshold:0});
-    spineIO.observe(proc);
-    var q = false;
-    function drawSpine(){
-      if(q) return; q = true;
-      requestAnimationFrame(function(){
-        var r = proc.getBoundingClientRect(),
-            p = (innerHeight * .55 - r.top) / r.height;
-        spine.style.strokeDashoffset = 1 - Math.max(0, Math.min(1, p));
-        q = false;
-      });
-    }
-    drawSpine();
+    more.hidden=expanded||total<=LIMIT; more.textContent='Prikaži sve radove ('+total+')';
+    spans(); count.textContent='Prikazano '+shown+' od '+total+' radova';
   }
-
-  /* directional hover fill + magnetic pull */
-  document.querySelectorAll('.btn').forEach(function(b){
-    b.addEventListener('mouseenter', function(e){
-      var r = b.getBoundingClientRect();
-      b.style.setProperty('--org', (e.clientY - r.top) < r.height / 2 ? '50% 0%' : '50% 100%');
-    });
-  });
-  if(fine && !reduce){
-    document.querySelectorAll('.magnet').forEach(function(b){
-      var raf = 0, tx = 0, ty = 0;
-      function apply(){ b.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0)'; raf = 0; }
-      b.addEventListener('mousemove', function(e){
-        var r = b.getBoundingClientRect();
-        tx = (e.clientX - r.left - r.width / 2) * .22;
-        ty = (e.clientY - r.top - r.height / 2) * .3;
-        if(!raf) raf = requestAnimationFrame(apply);
-      });
-      b.addEventListener('mouseleave', function(){
-        tx = ty = 0;
-        b.style.transition = 'transform .5s cubic-bezier(.34,1.42,.5,1)';
-        if(!raf) raf = requestAnimationFrame(apply);
-        setTimeout(function(){ b.style.transition = ''; }, 500);
-      });
-    });
-  }
-
-  /* faq, one open at a time, height animated */
-  document.querySelectorAll('.q').forEach(function(d){
-    var sum = d.querySelector('summary'), body = d.querySelector('.ans');
-    sum.addEventListener('click', function(e){
-      e.preventDefault();
-      var open = d.hasAttribute('open');
-      document.querySelectorAll('.q[open]').forEach(function(o){
-        if(o !== d){ o.removeAttribute('open'); o.querySelector('.ans').style.maxHeight = '0px'; }
-      });
-      if(open){ body.style.maxHeight = '0px'; d.removeAttribute('open'); }
-      else{ d.setAttribute('open',''); body.style.maxHeight = body.scrollHeight + 'px'; }
+  apply();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(spans);
+  var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(spans,120);});
+  more.addEventListener('click',function(){expanded=true;apply();});
+  document.querySelectorAll('.chip').forEach(function(c){
+    c.addEventListener('click',function(){
+      document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===c);});
+      filter=c.dataset.type; expanded=false; apply();
     });
   });
 
-
-  /* ============ RADOVI ============
-     Zamenite src putanjama do pravih fajlova. Video: src = .mp4, poster = .jpg
-     Dok je src prazan, prikazuje se brendirani prazan slot sa tacnim odnosom stranica. */
-  var RADOVI = [
-    {brend:'Nega koze',        tip:'statik', r:'4:5',  hook:'Zasto koza pece posle pilinga', src:''},
-    {brend:'Suplementi',       tip:'video',  r:'9:16', hook:'Probala sam 30 dana', src:'', poster:''},
-    {brend:'Modni brend',      tip:'statik', r:'1:1',  hook:'Rasprodato za tri dana', src:''},
-    {brend:'Nega koze',        tip:'statik', r:'4:5',  hook:'Tri koraka, dva minuta', src:''},
-    {brend:'Kafa, pretplata',  tip:'video',  r:'9:16', hook:'Prvih pet sekundi', src:'', poster:''},
-    {brend:'Suplementi',       tip:'statik', r:'4:5',  hook:'Sastav koji krijete od sebe', src:''},
-    {brend:'Namestaj',         tip:'statik', r:'1:1',  hook:'Isporuka za 48 sati', src:''},
-    {brend:'Kafa, pretplata',  tip:'statik', r:'4:5',  hook:'Bez ugovora, bez pretplate', src:''},
-    {brend:'Modni brend',      tip:'video',  r:'9:16', hook:'Hook varijanta B', src:'', poster:''},
-    {brend:'Namestaj',         tip:'video',  r:'4:5',  hook:'Sklapanje bez alata', src:'', poster:''},
-    {brend:'Nega koze',        tip:'video',  r:'9:16', hook:'Dan 1 naspram dana 28', src:'', poster:''},
-    {brend:'Suplementi',       tip:'statik', r:'1:1',  hook:'Cetiri kapsule, jedan razlog', src:''}
-  ];
-  var RAT = {'1:1':'1/1','4:5':'4/5','9:16':'9/16','16:9':'16/9'};
-  var GLYPH = '<svg viewBox="0 -15.18 128.57 115.18" aria-hidden="true"><g fill="none" stroke="#F4F0E8" stroke-width="7"><rect x="3.5" y="3.5" width="28.714" height="37.643"/><rect x="49.929" y="3.5" width="28.714" height="37.643"/><rect x="3.5" y="58.857" width="28.714" height="37.643"/><rect x="49.929" y="58.857" width="28.714" height="37.643"/><rect x="96.357" y="58.857" width="28.714" height="37.643"/></g><rect x="92.857" y="-15.179" width="35.714" height="44.643" fill="#D8F26B"/></svg>';
-
-  var box = document.getElementById('collage'),
-      emptyBox = document.getElementById('collageEmpty');
-
-  var tileIO = new IntersectionObserver(function(l){
-    l.forEach(function(e){
-      if(!e.isIntersecting) return;
-      e.target.classList.add('on');
-      var v = e.target.querySelector('video');
-      if(v && v.querySelector('source') && !fine) v.play().catch(function(){});
-      tileIO.unobserve(e.target);
-    });
-  }, {threshold:.12, rootMargin:'0px 0px -4% 0px'});
-
-  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){
-    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-
-  function render(filter){
-    var list = RADOVI.filter(function(x){ return filter === 'sve' || x.tip === filter; });
-    box.innerHTML = '';
-    emptyBox.classList.toggle('show', list.length === 0);
-
-    list.forEach(function(x, i){
-      var isVid = x.tip === 'video',
-          t = document.createElement('article');
-      t.className = 'tile' + (isVid ? ' vid' : '');
-      t.style.transitionDelay = Math.min(i, 9) * 55 + 'ms';
-
-      var media = '';
-      if(x.src && isVid){
-        media = '<video muted loop playsinline preload="metadata"' +
-                (x.poster ? ' poster="' + esc(x.poster) + '"' : '') +
-                '><source src="' + esc(x.src) + '" type="video/mp4"></video>';
-      } else if(x.src){
-        media = '<img src="' + esc(x.src) + '" alt="' + esc(x.brend + ', ' + x.hook) + '" loading="lazy" decoding="async">';
-      } else {
-        media = '<div class="slot">' + GLYPH + '<span class="hk">' + esc(x.hook) + '</span></div>';
-      }
-
-      t.innerHTML =
-        '<div class="media" style="aspect-ratio:' + RAT[x.r] + '">' +
-          '<span class="chip">' + (isVid ? 'VIDEO ' : '') + esc(x.r) + '</span>' + media +
-        '</div>' +
-        '<div class="bar"><b>' + esc(x.brend) + '</b><s>' + (isVid ? 'UGC video' : 'Statik') + '</s></div>';
-
-      box.appendChild(t);
-      tileIO.observe(t);
-    });
-  }
-
-  document.querySelectorAll('[data-filter]').forEach(function(b){
-    b.addEventListener('click', function(){
-      var f = b.dataset.filter;
-      document.querySelectorAll('.filters .fbtn').forEach(function(o){
-        o.setAttribute('aria-pressed', String(o.dataset.filter === f));
-      });
-      render(f);
+  // copy e-mail
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var txt=b.dataset.copy, done=function(){var o=b.textContent;b.textContent='Kopirano';setTimeout(function(){b.textContent=o;},1600);};
+      try{navigator.clipboard.writeText(txt).then(done,function(){sel(b.previousElementSibling);});}catch(e){sel(b.previousElementSibling);}
     });
   });
-  document.querySelectorAll('.filters [data-filter]').forEach(function(b){
-    var f = b.dataset.filter;
-    b.querySelector('.fcount').textContent =
-      f === 'sve' ? RADOVI.length : RADOVI.filter(function(x){ return x.tip === f; }).length;
-  });
-
-  if(fine){
-    box.addEventListener('mouseover', function(e){
-      var v = e.target.closest && e.target.closest('.tile') && e.target.closest('.tile').querySelector('video');
-      if(v && v.querySelector('source')) v.play().catch(function(){});
-    });
-  }
-  render('sve');
-
-  /* form: inline validation, loading, success */
-  var form = document.getElementById('lead');
-  function bad(name, on){
-    var f = form.querySelector('[data-f="' + name + '"]');
-    f.classList.toggle('bad', on);
-    f.querySelector('input,select,textarea').setAttribute('aria-invalid', on ? 'true' : 'false');
-  }
-  ['ime','brend','email'].forEach(function(n){
-    form.querySelector('#' + n).addEventListener('input', function(){ bad(n, false); });
-  });
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var ok = true, v = function(id){ return form.querySelector('#' + id).value.trim(); };
-    if(v('ime').length < 3){ bad('ime', true); ok = false; }
-    if(v('brend').length < 2){ bad('brend', true); ok = false; }
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v('email'))){ bad('email', true); ok = false; }
-    if(!ok){ form.querySelector('.bad input,.bad select').focus(); return; }
-
-    form.classList.add('sending');
-    setTimeout(function(){
-      form.classList.remove('sending');
-      form.classList.add('sent');
-    }, 1400);
-  });
+  function sel(el){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
 })();
 </script>
+
 </body>
 </html>
